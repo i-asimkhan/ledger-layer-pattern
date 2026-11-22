@@ -163,10 +163,10 @@ def test_a_pull_request_cannot_loosen_its_own_gate(repo):
 
 def test_first_adoption_falls_back_with_a_warning(tmp_path):
     import shutil
-    from conftest import DEMO, git
+    from conftest import DEMO, SKIP, git
 
     root = tmp_path / "shop"
-    shutil.copytree(DEMO, root)
+    shutil.copytree(DEMO, root, ignore=shutil.ignore_patterns(*SKIP))
     (root / "ledger.yml").rename(tmp_path / "ledger.yml.hold")  # main has no policy yet
     for args in (("init", "-b", "main"), ("config", "user.name", "T"), ("config", "user.email", "t@example.invalid"),
                  ("config", "commit.gpgsign", "false"), ("add", "-A"), ("commit", "-m", "initial"),
