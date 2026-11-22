@@ -4,51 +4,50 @@
 <marker id="mDC2626" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker>
 </defs>
 <rect width="1200" height="627" fill="#FFFFFF"/>
-<text x="40" y="51.6" text-anchor="start" font-size="36" font-weight="700" fill="#111827">Every build role has an audit role beside it</text>
-<text x="210.0" y="107.4" text-anchor="middle" font-size="24" font-weight="700" fill="#4B5563">BUILD ROLE</text>
-<text x="600.0" y="107.4" text-anchor="middle" font-size="24" font-weight="700" fill="#134E4A">SHARED RECORD</text>
-<text x="990.0" y="107.4" text-anchor="middle" font-size="24" font-weight="700" fill="#7F1D1D">AUDIT ROLE</text>
-<rect x="40" y="125" width="340" height="62" rx="14" fill="#F3F4F6" fill-opacity="1" stroke="#6B7280" stroke-width="3"/>
-<text x="210.0" y="165.1" text-anchor="middle" font-size="26" font-weight="700" fill="#111827">Business analyst</text>
-<rect x="420" y="125" width="360" height="62" rx="14" fill="#CCFBF1" fill-opacity="1" stroke="#0D9488" stroke-width="3"/>
-<text x="600.0" y="164.4" text-anchor="middle" font-size="24" font-weight="700" fill="#134E4A">Requirements</text>
-<rect x="820" y="125" width="340" height="62" rx="14" fill="#FEE2E2" fill-opacity="1" stroke="#DC2626" stroke-width="3"/>
-<text x="990.0" y="165.1" text-anchor="middle" font-size="26" font-weight="700" fill="#7F1D1D">Requirements auditor</text>
-<polyline points="380,156 420,156" fill="none" stroke="#334155" stroke-width="4" stroke-linejoin="round" marker-end="url(#m334155)"/>
-<polyline points="820,156 780,156" fill="none" stroke="#DC2626" stroke-width="4" stroke-linejoin="round" marker-end="url(#mDC2626)"/>
-<rect x="40" y="197" width="340" height="62" rx="14" fill="#F3F4F6" fill-opacity="1" stroke="#6B7280" stroke-width="3"/>
-<text x="210.0" y="237.1" text-anchor="middle" font-size="26" font-weight="700" fill="#111827">Architect</text>
-<rect x="420" y="197" width="360" height="62" rx="14" fill="#CCFBF1" fill-opacity="1" stroke="#0D9488" stroke-width="3"/>
-<text x="600.0" y="236.4" text-anchor="middle" font-size="24" font-weight="700" fill="#134E4A">Decision record + diagram</text>
-<rect x="820" y="197" width="340" height="62" rx="14" fill="#FEE2E2" fill-opacity="1" stroke="#DC2626" stroke-width="3"/>
-<text x="990.0" y="237.1" text-anchor="middle" font-size="26" font-weight="700" fill="#7F1D1D">Design auditor</text>
-<polyline points="380,228 420,228" fill="none" stroke="#334155" stroke-width="4" stroke-linejoin="round" marker-end="url(#m334155)"/>
-<polyline points="820,228 780,228" fill="none" stroke="#DC2626" stroke-width="4" stroke-linejoin="round" marker-end="url(#mDC2626)"/>
-<rect x="40" y="269" width="340" height="62" rx="14" fill="#F3F4F6" fill-opacity="1" stroke="#6B7280" stroke-width="3"/>
-<text x="210.0" y="309.1" text-anchor="middle" font-size="26" font-weight="700" fill="#111827">Developer</text>
-<rect x="420" y="269" width="360" height="62" rx="14" fill="#CCFBF1" fill-opacity="1" stroke="#0D9488" stroke-width="3"/>
-<text x="600.0" y="308.4" text-anchor="middle" font-size="24" font-weight="700" fill="#134E4A">Code + record</text>
-<rect x="820" y="269" width="340" height="62" rx="14" fill="#FEE2E2" fill-opacity="1" stroke="#DC2626" stroke-width="3"/>
-<text x="990.0" y="309.1" text-anchor="middle" font-size="26" font-weight="700" fill="#7F1D1D">Code auditor</text>
-<polyline points="380,300 420,300" fill="none" stroke="#334155" stroke-width="4" stroke-linejoin="round" marker-end="url(#m334155)"/>
-<polyline points="820,300 780,300" fill="none" stroke="#DC2626" stroke-width="4" stroke-linejoin="round" marker-end="url(#mDC2626)"/>
-<rect x="40" y="341" width="340" height="62" rx="14" fill="#F3F4F6" fill-opacity="1" stroke="#6B7280" stroke-width="3"/>
-<text x="210.0" y="381.1" text-anchor="middle" font-size="26" font-weight="700" fill="#111827">Tester</text>
-<rect x="420" y="341" width="360" height="62" rx="14" fill="#CCFBF1" fill-opacity="1" stroke="#0D9488" stroke-width="3"/>
-<text x="600.0" y="380.4" text-anchor="middle" font-size="24" font-weight="700" fill="#134E4A">Tests + results</text>
-<rect x="820" y="341" width="340" height="62" rx="14" fill="#FEE2E2" fill-opacity="1" stroke="#DC2626" stroke-width="3"/>
-<text x="990.0" y="381.1" text-anchor="middle" font-size="26" font-weight="700" fill="#7F1D1D">Test auditor</text>
-<polyline points="380,372 420,372" fill="none" stroke="#334155" stroke-width="4" stroke-linejoin="round" marker-end="url(#m334155)"/>
-<polyline points="820,372 780,372" fill="none" stroke="#DC2626" stroke-width="4" stroke-linejoin="round" marker-end="url(#mDC2626)"/>
-<rect x="40" y="413" width="340" height="62" rx="14" fill="#F3F4F6" fill-opacity="1" stroke="#6B7280" stroke-width="3"/>
-<text x="210.0" y="453.1" text-anchor="middle" font-size="26" font-weight="700" fill="#111827">Release engineer</text>
-<rect x="420" y="413" width="360" height="62" rx="14" fill="#CCFBF1" fill-opacity="1" stroke="#0D9488" stroke-width="3"/>
-<text x="600.0" y="452.4" text-anchor="middle" font-size="24" font-weight="700" fill="#134E4A">Release record</text>
-<rect x="820" y="413" width="340" height="62" rx="14" fill="#FEE2E2" fill-opacity="1" stroke="#DC2626" stroke-width="3"/>
-<text x="990.0" y="453.1" text-anchor="middle" font-size="26" font-weight="700" fill="#7F1D1D">Release auditor</text>
-<polyline points="380,444 420,444" fill="none" stroke="#334155" stroke-width="4" stroke-linejoin="round" marker-end="url(#m334155)"/>
-<polyline points="820,444 780,444" fill="none" stroke="#DC2626" stroke-width="4" stroke-linejoin="round" marker-end="url(#mDC2626)"/>
-<text x="40" y="524.5" text-anchor="start" font-size="30" font-weight="700" fill="#111827">Nobody audits their own work.</text>
-<text x="40" y="570.8" text-anchor="start" font-size="24" font-weight="400" fill="#111827">Builders write the record (arrows in). Auditors check it against the work.</text>
-<text x="40" y="602.0" text-anchor="start" font-size="24" font-weight="400" fill="#111827">In a small team, one auditor can cover several stages.</text>
+<text x="40" y="72.2" text-anchor="start" font-size="32" font-weight="700" fill="#111827">Every build role has an audit role beside it</text>
+<text x="210.0" y="116.0" text-anchor="middle" font-size="20" font-weight="700" fill="#4B5563">BUILD ROLE</text>
+<text x="610.0" y="116.0" text-anchor="middle" font-size="20" font-weight="700" fill="#134E4A">SHARED RECORD</text>
+<text x="990.0" y="116.0" text-anchor="middle" font-size="20" font-weight="700" fill="#7F1D1D">AUDIT ROLE</text>
+<rect x="40" y="134" width="340" height="56" rx="14" fill="#F3F4F6" fill-opacity="1" stroke="#6B7280" stroke-width="3"/>
+<text x="210.0" y="169.7" text-anchor="middle" font-size="22" font-weight="700" fill="#111827">Business analyst</text>
+<rect x="440" y="134" width="340" height="56" rx="14" fill="#CCFBF1" fill-opacity="1" stroke="#0D9488" stroke-width="3"/>
+<text x="610.0" y="169.3" text-anchor="middle" font-size="21" font-weight="700" fill="#134E4A">Requirements</text>
+<rect x="820" y="134" width="340" height="56" rx="14" fill="#FEE2E2" fill-opacity="1" stroke="#DC2626" stroke-width="3"/>
+<text x="990.0" y="169.7" text-anchor="middle" font-size="22" font-weight="700" fill="#7F1D1D">Requirements auditor</text>
+<polyline points="380,162 440,162" fill="none" stroke="#334155" stroke-width="4" stroke-linejoin="round" marker-end="url(#m334155)"/>
+<polyline points="820,162 780,162" fill="none" stroke="#DC2626" stroke-width="4" stroke-linejoin="round" marker-end="url(#mDC2626)"/>
+<rect x="40" y="214" width="340" height="56" rx="14" fill="#F3F4F6" fill-opacity="1" stroke="#6B7280" stroke-width="3"/>
+<text x="210.0" y="249.7" text-anchor="middle" font-size="22" font-weight="700" fill="#111827">Architect</text>
+<rect x="440" y="214" width="340" height="56" rx="14" fill="#CCFBF1" fill-opacity="1" stroke="#0D9488" stroke-width="3"/>
+<text x="610.0" y="249.3" text-anchor="middle" font-size="21" font-weight="700" fill="#134E4A">Decision record + diagram</text>
+<rect x="820" y="214" width="340" height="56" rx="14" fill="#FEE2E2" fill-opacity="1" stroke="#DC2626" stroke-width="3"/>
+<text x="990.0" y="249.7" text-anchor="middle" font-size="22" font-weight="700" fill="#7F1D1D">Design auditor</text>
+<polyline points="380,242 440,242" fill="none" stroke="#334155" stroke-width="4" stroke-linejoin="round" marker-end="url(#m334155)"/>
+<polyline points="820,242 780,242" fill="none" stroke="#DC2626" stroke-width="4" stroke-linejoin="round" marker-end="url(#mDC2626)"/>
+<rect x="40" y="294" width="340" height="56" rx="14" fill="#F3F4F6" fill-opacity="1" stroke="#6B7280" stroke-width="3"/>
+<text x="210.0" y="329.7" text-anchor="middle" font-size="22" font-weight="700" fill="#111827">Developer</text>
+<rect x="440" y="294" width="340" height="56" rx="14" fill="#CCFBF1" fill-opacity="1" stroke="#0D9488" stroke-width="3"/>
+<text x="610.0" y="329.4" text-anchor="middle" font-size="21" font-weight="700" fill="#134E4A">Code + record</text>
+<rect x="820" y="294" width="340" height="56" rx="14" fill="#FEE2E2" fill-opacity="1" stroke="#DC2626" stroke-width="3"/>
+<text x="990.0" y="329.7" text-anchor="middle" font-size="22" font-weight="700" fill="#7F1D1D">Code auditor</text>
+<polyline points="380,322 440,322" fill="none" stroke="#334155" stroke-width="4" stroke-linejoin="round" marker-end="url(#m334155)"/>
+<polyline points="820,322 780,322" fill="none" stroke="#DC2626" stroke-width="4" stroke-linejoin="round" marker-end="url(#mDC2626)"/>
+<rect x="40" y="374" width="340" height="56" rx="14" fill="#F3F4F6" fill-opacity="1" stroke="#6B7280" stroke-width="3"/>
+<text x="210.0" y="409.7" text-anchor="middle" font-size="22" font-weight="700" fill="#111827">Tester</text>
+<rect x="440" y="374" width="340" height="56" rx="14" fill="#CCFBF1" fill-opacity="1" stroke="#0D9488" stroke-width="3"/>
+<text x="610.0" y="409.4" text-anchor="middle" font-size="21" font-weight="700" fill="#134E4A">Tests + results</text>
+<rect x="820" y="374" width="340" height="56" rx="14" fill="#FEE2E2" fill-opacity="1" stroke="#DC2626" stroke-width="3"/>
+<text x="990.0" y="409.7" text-anchor="middle" font-size="22" font-weight="700" fill="#7F1D1D">Test auditor</text>
+<polyline points="380,402 440,402" fill="none" stroke="#334155" stroke-width="4" stroke-linejoin="round" marker-end="url(#m334155)"/>
+<polyline points="820,402 780,402" fill="none" stroke="#DC2626" stroke-width="4" stroke-linejoin="round" marker-end="url(#mDC2626)"/>
+<rect x="40" y="454" width="340" height="56" rx="14" fill="#F3F4F6" fill-opacity="1" stroke="#6B7280" stroke-width="3"/>
+<text x="210.0" y="489.7" text-anchor="middle" font-size="22" font-weight="700" fill="#111827">Release engineer</text>
+<rect x="440" y="454" width="340" height="56" rx="14" fill="#CCFBF1" fill-opacity="1" stroke="#0D9488" stroke-width="3"/>
+<text x="610.0" y="489.4" text-anchor="middle" font-size="21" font-weight="700" fill="#134E4A">Release record</text>
+<rect x="820" y="454" width="340" height="56" rx="14" fill="#FEE2E2" fill-opacity="1" stroke="#DC2626" stroke-width="3"/>
+<text x="990.0" y="489.7" text-anchor="middle" font-size="22" font-weight="700" fill="#7F1D1D">Release auditor</text>
+<polyline points="380,482 440,482" fill="none" stroke="#334155" stroke-width="4" stroke-linejoin="round" marker-end="url(#m334155)"/>
+<polyline points="820,482 780,482" fill="none" stroke="#DC2626" stroke-width="4" stroke-linejoin="round" marker-end="url(#mDC2626)"/>
+<text x="40" y="555.4" text-anchor="start" font-size="21" font-weight="700" fill="#111827">Nobody audits their own work. Builders write the record; auditors check it.</text>
+<text x="40" y="580.3" text-anchor="start" font-size="18" font-weight="400" fill="#4B5563">In a small team, one auditor can cover several stages.</text>
 </svg>

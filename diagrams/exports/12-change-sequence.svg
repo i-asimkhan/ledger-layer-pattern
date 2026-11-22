@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" font-family="Segoe UI, Arial, Helvetica, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="870" viewBox="0 0 1200 870" font-family="Segoe UI, Arial, Helvetica, sans-serif">
 <defs>
 <marker id="m0D9488" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0D9488"/></marker>
 <marker id="m334155" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#334155"/></marker>
@@ -6,49 +6,60 @@
 <marker id="mD97706" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker>
 <marker id="mDC2626" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker>
 </defs>
-<rect width="1200" height="720" fill="#FFFFFF"/>
-<text x="40" y="50.2" text-anchor="start" font-size="32" font-weight="700" fill="#111827">One change, in sequence: who calls whom, and when the gate decides</text>
-<rect x="20" y="74" width="200" height="56" rx="14" fill="#F3F4F6" fill-opacity="1" stroke="#6B7280" stroke-width="3"/>
-<text x="120.0" y="110.4" text-anchor="middle" font-size="24" font-weight="700" fill="#111827">Builder</text>
-<polyline points="120,130 120,690" fill="none" stroke="#4B5563" stroke-width="2" stroke-dasharray="8 8"/>
-<rect x="260" y="74" width="200" height="56" rx="14" fill="#EDE9FE" fill-opacity="1" stroke="#7C3AED" stroke-width="3"/>
-<text x="360.0" y="110.4" text-anchor="middle" font-size="24" font-weight="700" fill="#2E1065">Ledger layer</text>
-<polyline points="360,130 360,690" fill="none" stroke="#4B5563" stroke-width="2" stroke-dasharray="8 8"/>
-<rect x="500" y="74" width="200" height="56" rx="14" fill="#CCFBF1" fill-opacity="1" stroke="#0D9488" stroke-width="3"/>
-<text x="600.0" y="110.4" text-anchor="middle" font-size="24" font-weight="700" fill="#134E4A">Repository</text>
-<polyline points="600,130 600,690" fill="none" stroke="#4B5563" stroke-width="2" stroke-dasharray="8 8"/>
-<rect x="740" y="74" width="200" height="56" rx="14" fill="#E2E8F0" fill-opacity="1" stroke="#334155" stroke-width="3"/>
-<text x="840.0" y="110.4" text-anchor="middle" font-size="24" font-weight="700" fill="#0F172A">Gate (CI)</text>
-<polyline points="840,130 840,690" fill="none" stroke="#4B5563" stroke-width="2" stroke-dasharray="8 8"/>
-<rect x="980" y="74" width="200" height="56" rx="14" fill="#FEE2E2" fill-opacity="1" stroke="#DC2626" stroke-width="3"/>
-<text x="1080.0" y="110.4" text-anchor="middle" font-size="24" font-weight="700" fill="#7F1D1D">Auditor</text>
-<polyline points="1080,130 1080,690" fill="none" stroke="#4B5563" stroke-width="2" stroke-dasharray="8 8"/>
-<polyline points="120,172 600,172" fill="none" stroke="#334155" stroke-width="3" stroke-linejoin="round" marker-end="url(#m334155)"/>
-<text x="360.0" y="163.9" text-anchor="middle" font-size="17" font-weight="700" fill="#334155">1  push the change</text>
-<polyline points="360,214 600,214" fill="none" stroke="#7C3AED" stroke-width="3" stroke-linejoin="round" marker-end="url(#m7C3AED)"/>
-<text x="480.0" y="205.9" text-anchor="middle" font-size="17" font-weight="700" fill="#7C3AED">2  draft the record + change hash</text>
-<polyline points="120,256 600,256" fill="none" stroke="#D97706" stroke-width="3" stroke-linejoin="round" marker-end="url(#mD97706)"/>
-<text x="360.0" y="247.9" text-anchor="middle" font-size="17" font-weight="700" fill="#D97706">3  edit and attest the record</text>
-<polyline points="1080,298 600,298" fill="none" stroke="#DC2626" stroke-width="3" stroke-linejoin="round" marker-end="url(#mDC2626)"/>
-<text x="840.0" y="289.9" text-anchor="middle" font-size="17" font-weight="700" fill="#DC2626">4  read the record and the code</text>
-<polyline points="1080,340 120,340" fill="none" stroke="#DC2626" stroke-width="3" stroke-linejoin="round" marker-end="url(#mDC2626)"/>
-<text x="600.0" y="331.9" text-anchor="middle" font-size="17" font-weight="700" fill="#DC2626">5  explain-back questions</text>
-<polyline points="120,382 1080,382" fill="none" stroke="#D97706" stroke-width="3" stroke-linejoin="round" stroke-dasharray="12 8" marker-end="url(#mD97706)"/>
-<text x="600.0" y="373.9" text-anchor="middle" font-size="17" font-weight="700" fill="#D97706">6  the builder explains</text>
-<polyline points="1080,424 600,424" fill="none" stroke="#DC2626" stroke-width="3" stroke-linejoin="round" marker-end="url(#mDC2626)"/>
-<text x="840.0" y="415.9" text-anchor="middle" font-size="17" font-weight="700" fill="#DC2626">7  record the audit: consistency, explain-back, stress</text>
-<polyline points="840,466 600,466" fill="none" stroke="#334155" stroke-width="3" stroke-linejoin="round" marker-end="url(#m334155)"/>
-<text x="720.0" y="457.9" text-anchor="middle" font-size="17" font-weight="700" fill="#334155">8  read the policy from the base branch</text>
-<polyline points="840,508 600,508" fill="none" stroke="#334155" stroke-width="3" stroke-linejoin="round" marker-end="url(#m334155)"/>
-<text x="720.0" y="499.9" text-anchor="middle" font-size="17" font-weight="700" fill="#334155">9  check: attested, audited, hash matches</text>
-<rect x="40" y="530" width="1120" height="140" rx="6" fill="#FFFFFF" fill-opacity="1" stroke="#4B5563" stroke-opacity="1" stroke-width="2" stroke-dasharray="10 6"/>
-<text x="52" y="552.3" text-anchor="start" font-size="18" font-weight="700" fill="#4B5563">alt</text>
-<text x="110" y="552.0" text-anchor="start" font-size="17" font-weight="400" fill="#4B5563">[all checks pass]</text>
-<polyline points="840,580 120,580" fill="none" stroke="#0D9488" stroke-width="3" stroke-linejoin="round" marker-end="url(#m0D9488)"/>
-<text x="480.0" y="572.0" text-anchor="middle" font-size="17" font-weight="700" fill="#0D9488">10  merge allowed</text>
-<polyline points="40,604 1160,604" fill="none" stroke="#4B5563" stroke-width="2" stroke-dasharray="8 8"/>
-<text x="110" y="626.0" text-anchor="start" font-size="17" font-weight="400" fill="#4B5563">[missing, unaudited or drifted]</text>
-<polyline points="840,650 120,650" fill="none" stroke="#DC2626" stroke-width="3" stroke-linejoin="round" stroke-dasharray="12 8" marker-end="url(#mDC2626)"/>
-<text x="480.0" y="642.0" text-anchor="middle" font-size="17" font-weight="700" fill="#DC2626">11  refused: back to the builder</text>
-<text x="40" y="703.0" text-anchor="start" font-size="20" font-weight="400" fill="#4B5563">The gate reads the policy from the base branch, so a change cannot loosen its own gate.</text>
+<rect width="1200" height="870" fill="#FFFFFF"/>
+<text x="40" y="70.0" text-anchor="start" font-size="30" font-weight="700" fill="#111827">One change, in sequence: who calls whom, and when the gate decides</text>
+<rect x="40" y="96" width="200" height="56" rx="14" fill="#F3F4F6" fill-opacity="1" stroke="#6B7280" stroke-width="3"/>
+<text x="140.0" y="131.7" text-anchor="middle" font-size="22" font-weight="700" fill="#111827">Builder</text>
+<polyline points="140,152 140,724" fill="none" stroke="#4B5563" stroke-width="2" stroke-dasharray="8 8"/>
+<rect x="270" y="96" width="200" height="56" rx="14" fill="#EDE9FE" fill-opacity="1" stroke="#7C3AED" stroke-width="3"/>
+<text x="370.0" y="131.7" text-anchor="middle" font-size="22" font-weight="700" fill="#2E1065">Ledger layer</text>
+<polyline points="370,152 370,724" fill="none" stroke="#4B5563" stroke-width="2" stroke-dasharray="8 8"/>
+<rect x="500" y="96" width="200" height="56" rx="14" fill="#CCFBF1" fill-opacity="1" stroke="#0D9488" stroke-width="3"/>
+<text x="600.0" y="131.7" text-anchor="middle" font-size="22" font-weight="700" fill="#134E4A">Repository</text>
+<polyline points="600,152 600,724" fill="none" stroke="#4B5563" stroke-width="2" stroke-dasharray="8 8"/>
+<rect x="730" y="96" width="200" height="56" rx="14" fill="#E2E8F0" fill-opacity="1" stroke="#334155" stroke-width="3"/>
+<text x="830.0" y="131.7" text-anchor="middle" font-size="22" font-weight="700" fill="#0F172A">Gate (CI)</text>
+<polyline points="830,152 830,724" fill="none" stroke="#4B5563" stroke-width="2" stroke-dasharray="8 8"/>
+<rect x="960" y="96" width="200" height="56" rx="14" fill="#FEE2E2" fill-opacity="1" stroke="#DC2626" stroke-width="3"/>
+<text x="1060.0" y="131.7" text-anchor="middle" font-size="22" font-weight="700" fill="#7F1D1D">Auditor</text>
+<polyline points="1060,152 1060,724" fill="none" stroke="#4B5563" stroke-width="2" stroke-dasharray="8 8"/>
+<polyline points="140,196 600,196" fill="none" stroke="#334155" stroke-width="3" stroke-linejoin="round" marker-end="url(#m334155)"/>
+<rect x="289.5" y="167" width="161" height="26" rx="6" fill="#FFFFFF"/>
+<text x="370.0" y="185.6" text-anchor="middle" font-size="16" font-weight="700" fill="#334155">1  push the change</text>
+<polyline points="370,244 600,244" fill="none" stroke="#7C3AED" stroke-width="3" stroke-linejoin="round" marker-end="url(#m7C3AED)"/>
+<rect x="387.5" y="215" width="195" height="26" rx="6" fill="#FFFFFF"/>
+<text x="485.0" y="233.6" text-anchor="middle" font-size="16" font-weight="700" fill="#7C3AED">2  draft record + hash</text>
+<polyline points="140,292 600,292" fill="none" stroke="#D97706" stroke-width="3" stroke-linejoin="round" marker-end="url(#mD97706)"/>
+<rect x="243.5" y="263" width="253" height="26" rx="6" fill="#FFFFFF"/>
+<text x="370.0" y="281.6" text-anchor="middle" font-size="16" font-weight="700" fill="#D97706">3  edit and attest the record</text>
+<polyline points="1060,340 600,340" fill="none" stroke="#DC2626" stroke-width="3" stroke-linejoin="round" marker-end="url(#mDC2626)"/>
+<rect x="712.0" y="311" width="236" height="26" rx="6" fill="#FFFFFF"/>
+<text x="830.0" y="329.6" text-anchor="middle" font-size="16" font-weight="700" fill="#DC2626">4  read the record and code</text>
+<polyline points="1060,388 140,388" fill="none" stroke="#DC2626" stroke-width="3" stroke-linejoin="round" marker-end="url(#mDC2626)"/>
+<rect x="490.0" y="359" width="220" height="26" rx="6" fill="#FFFFFF"/>
+<text x="600.0" y="377.6" text-anchor="middle" font-size="16" font-weight="700" fill="#DC2626">5  explain-back questions</text>
+<polyline points="140,436 1060,436" fill="none" stroke="#D97706" stroke-width="3" stroke-linejoin="round" stroke-dasharray="12 8" marker-end="url(#mD97706)"/>
+<rect x="498.5" y="407" width="203" height="26" rx="6" fill="#FFFFFF"/>
+<text x="600.0" y="425.6" text-anchor="middle" font-size="16" font-weight="700" fill="#D97706">6  the builder explains</text>
+<polyline points="1060,484 600,484" fill="none" stroke="#DC2626" stroke-width="3" stroke-linejoin="round" marker-end="url(#mDC2626)"/>
+<rect x="616.0" y="455" width="428" height="26" rx="6" fill="#FFFFFF"/>
+<text x="830.0" y="473.6" text-anchor="middle" font-size="16" font-weight="700" fill="#DC2626">7  record audit: consistency, explain-back, stress</text>
+<polyline points="830,532 600,532" fill="none" stroke="#334155" stroke-width="3" stroke-linejoin="round" marker-end="url(#m334155)"/>
+<rect x="622.0" y="503" width="186" height="26" rx="6" fill="#FFFFFF"/>
+<text x="715.0" y="521.6" text-anchor="middle" font-size="16" font-weight="700" fill="#334155">8  base-branch policy</text>
+<polyline points="830,580 600,580" fill="none" stroke="#334155" stroke-width="3" stroke-linejoin="round" marker-end="url(#m334155)"/>
+<rect x="617.5" y="551" width="195" height="26" rx="6" fill="#FFFFFF"/>
+<text x="715.0" y="569.6" text-anchor="middle" font-size="16" font-weight="700" fill="#334155">9  check record + hash</text>
+<rect x="40" y="610" width="1120" height="150" rx="6" fill="#FFFFFF" fill-opacity="1" stroke="#4B5563" stroke-opacity="1" stroke-width="2" stroke-dasharray="10 6"/>
+<text x="54" y="635.0" text-anchor="start" font-size="17" font-weight="700" fill="#4B5563">alt</text>
+<text x="110" y="634.6" text-anchor="start" font-size="16" font-weight="400" fill="#4B5563">[all checks pass]</text>
+<polyline points="830,666 140,666" fill="none" stroke="#0D9488" stroke-width="3" stroke-linejoin="round" marker-end="url(#m0D9488)"/>
+<rect x="408.5" y="637" width="153" height="26" rx="6" fill="#FFFFFF"/>
+<text x="485.0" y="655.6" text-anchor="middle" font-size="16" font-weight="700" fill="#0D9488">10  merge allowed</text>
+<polyline points="40,688 1160,688" fill="none" stroke="#4B5563" stroke-width="2" stroke-dasharray="8 8"/>
+<text x="110" y="712.6" text-anchor="start" font-size="16" font-weight="400" fill="#4B5563">[missing, unaudited or drifted]</text>
+<polyline points="830,742 140,742" fill="none" stroke="#DC2626" stroke-width="3" stroke-linejoin="round" stroke-dasharray="12 8" marker-end="url(#mDC2626)"/>
+<rect x="346.0" y="713" width="278" height="26" rx="6" fill="#FFFFFF"/>
+<text x="485.0" y="731.6" text-anchor="middle" font-size="16" font-weight="700" fill="#DC2626">11  refused: back to the builder</text>
+<text x="40" y="805.6" text-anchor="start" font-size="19" font-weight="400" fill="#4B5563">The gate reads the policy from the base branch, so a change cannot loosen its own gate.</text>
 </svg>
