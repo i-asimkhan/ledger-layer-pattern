@@ -11,6 +11,7 @@ obvious, and no crossing lines.
 
 | # | Diagram | Source | PNG | SVG | LinkedIn (light / dark) |
 |---|---|---|---|---|---|
+| 00 | Cover: The Ledger Layer, Making AI-Era Code Auditable | [drawio](00-cover.drawio) | [png](exports/00-cover.png) | [svg](exports/00-cover.svg) | [light](exports/00-cover-1200x627.png) / [dark](exports/00-cover-linkedin-dark-1200x627.png) |
 | 01 | The Ledger layer creates the evidence. Audit gives it meaning. | [drawio](01-ledger-layer-architecture.drawio) | [png](exports/01-ledger-layer-architecture.png) | [svg](exports/01-ledger-layer-architecture.svg) | [light](exports/01-ledger-layer-architecture-linkedin-1200x627.png) / [dark](exports/01-ledger-layer-architecture-linkedin-dark-1200x627.png) |
 | 02 | One change: drafted, signed by its builder, then audited | [drawio](02-change-lifecycle.drawio) | [png](exports/02-change-lifecycle.png) | [svg](exports/02-change-lifecycle.svg) | [light](exports/02-change-lifecycle-linkedin-1200x627.png) / [dark](exports/02-change-lifecycle-linkedin-dark-1200x627.png) |
 | 03 | Independent audit sits outside the teams that build | [drawio](03-three-lines-for-software.drawio) | [png](exports/03-three-lines-for-software.png) | [svg](exports/03-three-lines-for-software.svg) | |
