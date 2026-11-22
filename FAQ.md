@@ -35,8 +35,9 @@ Addy Osmani writes: "Treat AGENTS.md as your intent ledger, not your config."
 ([source](https://addyosmani.com/blog/intent-debt/)). That is a practice: a file, kept by the team, that
 records the reasons behind decisions, for people and tools to read. This pattern is a **layer in the
 architecture**: it produces the evidence for every change by default, ties it to the code with a hash, and
-hands it to independent auditors, with a gate that enforces it. His is a habit. This is a structure with a
-check on top. The two fit together, and the idea of writing intent down is his and Storey's.
+hands it to independent auditors, with a gate that enforces it. The two fit together: his practice writes the
+reasoning down, and this pattern gives it a home in the architecture and an independent check. The idea of writing
+intent down is his and Storey's.
 
 ## Is the "Ledger" a blockchain?
 

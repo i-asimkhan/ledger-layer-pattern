@@ -161,6 +161,9 @@ Sample output (from the walkthrough): [failing](docs/demo-output/failing.txt),
 
 ## Help shape this pattern
 
+This is one proposal among many. Practices like code review, decision records and independent verification each went
+through many versions before they became normal. Treat this as v0.1: something to test, argue with and improve together.
+
 This is an open proposal, and I would like input from across the industry. It is early, and it is probably wrong in
 places. If you build, test, audit, review, manage or secure software, I would like to hear where it breaks.
 
