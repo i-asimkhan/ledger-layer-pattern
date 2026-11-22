@@ -24,6 +24,7 @@ obvious, and no crossing lines.
 | 09b | MVVM + the Ledger layer: the layer does not care which pattern (after) | [drawio](09b-mvvm-with-ledger-layer.drawio) | [png](exports/09b-mvvm-with-ledger-layer.png) | [svg](exports/09b-mvvm-with-ledger-layer.svg) | |
 | 10 | End to end: from a user's request to a trusted change | [drawio](10-end-to-end.drawio) | [png](exports/10-end-to-end.png) | [svg](exports/10-end-to-end.svg) | [light](exports/10-end-to-end-linkedin-1200x627.png) / [dark](exports/10-end-to-end-linkedin-dark-1200x627.png) |
 | 11 | What this means for jobs (the author's view) | [drawio](11-jobs.drawio) | [png](exports/11-jobs.png) | [svg](exports/11-jobs.svg) | [light](exports/11-jobs-linkedin-1200x627.png) / [dark](exports/11-jobs-linkedin-dark-1200x627.png) |
+| 12 | One change, in sequence: who calls whom, and when the gate decides | [drawio](12-change-sequence.drawio) | [png](exports/12-change-sequence.png) | [svg](exports/12-change-sequence.svg) | |
 
 Notes:
 
@@ -33,6 +34,7 @@ Notes:
 - **03** is a software mapping of the IIA Three Lines Model (2020): delegation flows down to management, and internal
   and external audit report up to the governing body. **06** uses the IV&V terms technical, managerial and financial
   independence.
+- **12** is a UML-style sequence diagram for engineers; SPEC.md Appendix A has the same diagram in Mermaid.
 - **11** is the author's view of the next 10-20 years, not a forecast from data. Its bar lengths are an illustration.
 - The `.drawio` files are the light versions. The exports were rendered from the same layout, so they match. If you
   open a `.drawio` file in draw.io and re-export, small text spacing differences are normal.

@@ -130,3 +130,35 @@ An implementation conforms to v0.1 if it satisfies every MUST in sections 2 to 7
 describes organisational practice and is not machine-checkable. The reference implementation in this
 repository is an illustration, not a conforming product. It does not enforce 2.5, it does not propose diagram
 updates (3.2b), and it records attestation as a typed name (4.4).
+
+## Appendix A: one change, in sequence (informative)
+
+This appendix is informative, not normative. It shows the order of the steps in sections 3 to 6 for a single change.
+GitHub draws the diagram below automatically; the same diagram is also available as
+[draw.io diagram 12](diagrams/12-change-sequence.drawio) ([PNG](diagrams/exports/12-change-sequence.png)).
+
+```mermaid
+sequenceDiagram
+    actor Builder
+    participant Ledger as Ledger layer
+    participant Repo as Repository (records)
+    participant Gate as Gate (CI)
+    actor Auditor
+    Builder->>Repo: 1. push the change
+    Ledger->>Repo: 2. draft the record + change hash (3.2)
+    Builder->>Repo: 3. edit and attest the record (4.1)
+    Auditor->>Repo: 4. read the record and the code
+    Auditor->>Builder: 5. explain-back questions (5.3)
+    Builder-->>Auditor: 6. the builder explains
+    Auditor->>Repo: 7. record the audit: consistency, explain-back, stress (5.4)
+    Gate->>Repo: 8. read the policy from the base branch (6.2)
+    Gate->>Repo: 9. check: attested, audited, hash matches (6.1)
+    alt all checks pass
+        Gate-->>Builder: 10. merge allowed
+    else missing, unaudited or drifted
+        Gate-->>Builder: 11. refused: back to the builder
+    end
+```
+
+Which checks step 7 must include depends on how hard the change is to undo (section 7.3). In a small team, steps 4 to 7
+may be quick; they are never done by the builder (5.1).
