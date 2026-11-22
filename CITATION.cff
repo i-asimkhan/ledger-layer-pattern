@@ -1,14 +1,14 @@
 cff-version: 1.2.0
 message: "If you use or discuss this pattern, please cite it as below."
-title: "The Ledger layer and the audit layer: a design pattern for comprehension debt"
+title: "The Ledger Layer: Making AI-Era Code Auditable"
 abstract: >-
   A proposed design pattern in which a Ledger layer drafts a record for every change, the builder
   attests it, a gate refuses changes without an audited record, and independent auditors check the
   record against the work, with audit depth set by how hard a change is to undo.
 type: software
 version: 0.1.0
-# Update date-released to the actual release date when v0.1 is published.
-date-released: 2026-11-21
+# date-released is the planned v0.1 launch date.
+date-released: 2026-11-23
 authors:
   - family-names: Khan
     given-names: Asim

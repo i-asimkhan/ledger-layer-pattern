@@ -1,4 +1,4 @@
-# The Ledger layer and the audit layer
+# The Ledger Layer: Making AI-Era Code Auditable
 
 A design pattern for comprehension debt. Status: **v0.1, a proposal** (see [SPEC.md](SPEC.md)).
 
