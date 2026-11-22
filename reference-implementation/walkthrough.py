@@ -59,7 +59,7 @@ def main():
 
     say("setup", "# 1. A builder adds a bulk discount: a model change (hard to undo) and a data migration (cannot be undone).")
     model = root / "app/model/order.py"
-    model.write_text(model.read_text() + "\n    def discounted_total(self) -> float:\n"
+    model.write_text(model.read_text(encoding="utf-8") + "\n    def discounted_total(self) -> float:\n"
                      "        qty = sum(self.items.values())\n"
                      "        return round(self.total() * (0.9 if qty >= 10 else 1.0), 2)\n", encoding="utf-8", newline="\n")
     (root / "db/migrations/003_add_discount.sql").write_text(
@@ -102,7 +102,7 @@ def main():
     ledger(root, "passing", "check", "--base", "main")
 
     say("failing", "# 9. Someone edits the model after the audit. The record and the code have drifted.")
-    model.write_text(model.read_text() + "\n# a late tweak\n", encoding="utf-8", newline="\n")
+    model.write_text(model.read_text(encoding="utf-8") + "\n# a late tweak\n", encoding="utf-8", newline="\n")
     git(root, "add", "-A")
     git(root, "commit", "-m", "Late tweak")
     ledger(root, "failing", "check", "--base", "main")

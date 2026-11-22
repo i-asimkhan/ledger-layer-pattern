@@ -15,7 +15,7 @@ def cmd_draft(a):
     files = a.files or [p for p in check_mod.changed_files(root, a.base) if not policy.ignored(p)]
     if not files:
         raise SystemExit("no files to cover: pass --files, or make a change relative to --base")
-    rec = draft_mod.draft(root, policy, files, a.title, a.spec or "", a.provider)
+    rec = draft_mod.draft(root, policy, files, a.title, a.spec or "")
     print(f"drafted {rec.path.relative_to(root).as_posix()}  (reversibility: {rec.meta['reversibility']})")
     print("next: edit the record so it is true, then run: ledger attest", rec.id, "--by <your name>")
 
@@ -65,7 +65,6 @@ def main(argv=None):
     d.add_argument("--files", nargs="*", help="files the record covers (default: files changed vs --base)")
     d.add_argument("--base", default="main")
     d.add_argument("--spec", help="link or id of the spec or story")
-    d.add_argument("--provider", help="'template' (offline, default) or 'package.module:function'")
     d.set_defaults(func=cmd_draft)
 
     t = sub.add_parser("attest", help="the builder signs the record")

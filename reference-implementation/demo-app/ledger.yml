@@ -14,7 +14,7 @@ default_reversibility: easy
 # First match wins. Put the hardest-to-undo paths first.
 reversibility:
   - path: "db/migrations/**"
-    level: cannot_undo        # a data migration is hard to take back
+    level: cannot_undo        # a migration that drops or rewrites data can destroy it for good
   - path: "ledger.yml"
     level: hard               # changing the policy changes the rules
   - path: "app/model/**"

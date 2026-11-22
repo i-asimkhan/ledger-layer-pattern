@@ -180,19 +180,6 @@ def test_first_adoption_falls_back_with_a_warning(tmp_path):
 
 
 # ---- drafting ------------------------------------------------------------
-def test_custom_provider_is_pluggable(repo, monkeypatch):
-    import sys
-    import types
-
-    mod = types.ModuleType("my_provider")
-    mod.draft = lambda files: {"context": "ctx from provider", "decision": "dec", "alternatives": "alt",
-                               "consequences": "con"}
-    monkeypatch.setitem(sys.modules, "my_provider", mod)
-    commit_change(repo, VIEW, "# changed\n")
-    rec = draft_mod.draft(repo, Policy.load(repo), [VIEW], "Custom", provider_spec="my_provider:draft")
-    assert "ctx from provider" in rec.body and rec.meta["drafted_by"] == "my_provider:draft"
-
-
 def test_attest_computes_edited_flag(repo):
     commit_change(repo, VIEW, "# changed\n")
     policy = Policy.load(repo)

@@ -8,7 +8,9 @@ A design pattern for comprehension debt. Status: **v0.1, a proposal** (see [SPEC
 >
 > "Ledger" here means a record of decisions kept with the code. It is not a blockchain.
 
-Article: link added on publication. Views are my own.
+Article: link added on publication.
+
+> A personal project, made on my own time. Views are my own and do not describe or represent any employer.
 
 ## The problem
 
@@ -41,7 +43,7 @@ Writing the reasoning down helps, but it does not close the gap on its own:
 The rules, in short (the normative version is [SPEC.md](SPEC.md)):
 
 1. Every change that needs a record has one, kept in the repository next to the code it covers.
-2. A named human, the builder, attests the record. Builders use tools to build fast, but they own what they sign.
+2. A named human, the builder, attests the record. Builders use tools to build fast, but they own what they sign. (In the demo a "signature" is a typed name. A real setup ties attestation and audit to verified accounts: pull request approvals, branch protection, signed commits.)
 3. A different person audits it. **Nobody audits their own work.**
 4. The record carries a hash of the change, so the code and the record cannot drift apart unnoticed.
 5. The gate refuses a change that has no signed, audited record that still matches the code.
@@ -55,6 +57,11 @@ The rules, in short (the normative version is [SPEC.md](SPEC.md)):
 | **Behaviour** | Does the system hold up? | Independent stress and adversarial testing |
 
 A record that the builder signed with **zero edits** to the drafted text is flagged.
+
+**What auditors look at:** code quality and the damage a change could do; whether the requirements and the business
+need are met; efficiency; and whether someone who did not write it can explain it. The records also pay off later:
+when something breaks, the decision, its alternatives and its audit are written down next to the code, which helps
+debugging and reverse engineering.
 
 ### Irreversibility sets audit depth
 
@@ -99,7 +106,7 @@ switch it off.
 cd reference-implementation
 pip install -e ".[test]"
 python walkthrough.py        # a 60-second scripted walkthrough
-pytest                       # 15 tests
+pytest                       # 14 tests
 ```
 
 Use the gate in a pull request workflow. The action is [action.yml](action.yml) (the `v0.1` tag exists
@@ -111,7 +118,7 @@ jobs:
   ledger-gate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: i-asimkhan/ledger-layer-pattern@v0.1
 ```
 
@@ -132,6 +139,24 @@ Sample output (from the walkthrough): [failing](docs/demo-output/failing.txt),
 | [action.yml](action.yml) | The gate as a reusable GitHub Action |
 | [SOURCES.md](SOURCES.md) | References, with links |
 
+## Help shape this pattern
+
+This is an open proposal, and I would like input from across the industry. It is early, and it is probably wrong in
+places. If you build, test, audit, review, manage or secure software, I would like to hear where it breaks.
+
+Questions I would like answered:
+
+1. **Where would this break in your organisation?** What would your team skip first?
+2. **How would you tell a real audit from a rubber stamp?** What evidence of understanding is enough?
+3. **What should audit depth depend on?** I use "how hard is it to undo". What else matters?
+4. **Who audits the auditors** at your size: a small team, a large organisation, high-sensitivity work?
+5. **What already does part of this?** Practices, standards or tools I should credit or compare against.
+6. **What would make the Ledger layer cheap to adopt** in the tools you already use?
+
+How to join, once the repository is public: use **GitHub Discussions** for open questions and ideas, and
+**issues** for specific proposals, spec changes and bugs (templates are provided). Pull requests to the spec,
+the FAQ and the comparison table are welcome.
+
 ## Credits and prior art
 
 This pattern adapts existing practice and builds on other people's work: Addy Osmani ("Comprehension
@@ -151,4 +176,4 @@ See [CITATION.cff](CITATION.cff).
 
 ## Author
 
-Asim Khan. Views are my own.
+Asim Khan. A personal project, made on my own time. Views are my own and do not describe or represent any employer.

@@ -34,10 +34,10 @@
 <polyline points="435,385 390,385" fill="none" stroke="#334155" stroke-width="4" stroke-linejoin="round" marker-end="url(#m334155)"/>
 <polyline points="600,330 600,285 225,285 225,237" fill="none" stroke="#DC2626" stroke-width="4" stroke-linejoin="round" stroke-dasharray="12 8" marker-end="url(#mDC2626)"/>
 <text x="240" y="272.7" text-anchor="start" font-size="22" font-weight="400" fill="#DC2626">refused: back to the builder</text>
-<rect x="1000" y="106" width="170" height="30" rx="14" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
-<text x="1085.0" y="128.0" text-anchor="middle" font-size="20" font-weight="700" fill="#78350F">human decision</text>
-<rect x="1000" y="311" width="170" height="30" rx="14" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
-<text x="1085.0" y="333.0" text-anchor="middle" font-size="20" font-weight="700" fill="#78350F">human decision</text>
+<rect x="1000" y="90" width="170" height="30" rx="14" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+<text x="1085.0" y="112.0" text-anchor="middle" font-size="20" font-weight="700" fill="#78350F">human decision</text>
+<rect x="1000" y="294" width="170" height="30" rx="14" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+<text x="1085.0" y="316.0" text-anchor="middle" font-size="20" font-weight="700" fill="#78350F">human decision</text>
 <rect x="40" y="486" width="26" height="26" rx="12" fill="#EDE9FE" stroke="#7C3AED" stroke-width="3"/>
 <text x="76" y="507.4" text-anchor="start" font-size="24" font-weight="400" fill="#111827">tooling</text>
 <rect x="216" y="486" width="26" height="26" rx="12" fill="#CCFBF1" stroke="#0D9488" stroke-width="3"/>
