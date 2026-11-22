@@ -4,32 +4,36 @@
 <marker id="m334155" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#334155"/></marker>
 </defs>
 <text x="40" y="56.2" text-anchor="start" font-size="35" font-weight="700" fill="#111827">The Ledger layer creates the evidence. Audit gives it meaning.</text>
-<rect x="30" y="72" width="1140" height="84" rx="14" fill="#FEE2E2" stroke="#DC2626" stroke-width="3"/>
-<text x="600.0" y="108.3" text-anchor="middle" font-size="32" font-weight="700" fill="#7F1D1D">4  AUDIT LAYER</text>
-<text x="600.0" y="143.1" text-anchor="middle" font-size="26" font-weight="400" fill="#7F1D1D">independent auditors check the record against the work</text>
-<rect x="30" y="166" width="1140" height="84" rx="14" fill="#E2E8F0" stroke="#334155" stroke-width="3"/>
-<text x="600.0" y="202.3" text-anchor="middle" font-size="32" font-weight="700" fill="#0F172A">3  GATE</text>
-<text x="600.0" y="237.1" text-anchor="middle" font-size="26" font-weight="400" fill="#0F172A">no signed, audited record, no merge</text>
-<rect x="30" y="260" width="1140" height="84" rx="14" fill="#FEF3C7" stroke="#D97706" stroke-width="3"/>
-<text x="600.0" y="296.3" text-anchor="middle" font-size="32" font-weight="700" fill="#78350F">2  ATTEST</text>
-<text x="600.0" y="331.1" text-anchor="middle" font-size="26" font-weight="400" fill="#78350F">the builder reviews, edits and signs the record</text>
-<rect x="30" y="354" width="250" height="52" rx="14" fill="#F3F4F6" stroke="#6B7280" stroke-width="3"/>
-<text x="155.0" y="389.8" text-anchor="middle" font-size="28" font-weight="700" fill="#111827">Model</text>
-<rect x="30" y="414" width="250" height="52" rx="14" fill="#F3F4F6" stroke="#6B7280" stroke-width="3"/>
-<text x="155.0" y="449.8" text-anchor="middle" font-size="28" font-weight="700" fill="#111827">View</text>
-<rect x="30" y="474" width="250" height="52" rx="14" fill="#F3F4F6" stroke="#6B7280" stroke-width="3"/>
-<text x="155.0" y="509.8" text-anchor="middle" font-size="28" font-weight="700" fill="#111827">Controller</text>
-<rect x="300" y="354" width="270" height="172" rx="14" fill="#EDE9FE" stroke="#7C3AED" stroke-width="3"/>
-<text x="435.0" y="403.0" text-anchor="middle" font-size="28" font-weight="700" fill="#2E1065">1  LEDGER LAYER</text>
-<text x="435.0" y="434.7" text-anchor="middle" font-size="24" font-weight="400" fill="#2E1065">runs beside the app,</text>
-<text x="435.0" y="465.9" text-anchor="middle" font-size="24" font-weight="400" fill="#2E1065">drafts a record for</text>
-<text x="435.0" y="497.1" text-anchor="middle" font-size="24" font-weight="400" fill="#2E1065">every change</text>
-<rect x="590" y="354" width="580" height="172" rx="14" fill="#CCFBF1" stroke="#0D9488" stroke-width="3"/>
-<text x="880.0" y="416.7" text-anchor="middle" font-size="30" font-weight="700" fill="#134E4A">RECORD, in the repo</text>
-<text x="880.0" y="450.9" text-anchor="middle" font-size="26" font-weight="400" fill="#134E4A">decision, diagram update,</text>
-<text x="880.0" y="484.8" text-anchor="middle" font-size="26" font-weight="400" fill="#134E4A">spec link, change hash</text>
-<polyline points="570,440 590,440" fill="none" stroke="#334155" stroke-width="4" stroke-linejoin="round" marker-end="url(#m334155)"/>
-<text x="30" y="552.7" text-anchor="start" font-size="22" font-weight="400" fill="#4B5563">Your application, any architecture pattern</text>
-<text x="30" y="586.1" text-anchor="start" font-size="26" font-weight="700" fill="#78350F">The harder a change is to undo, the deeper the audit.</text>
-<text x="30" y="614.7" text-anchor="start" font-size="22" font-weight="400" fill="#111827">Ledger means a record of decisions kept with the code. It is not a blockchain.</text>
+<rect x="30" y="74" width="1140" height="82" rx="14" fill="#FEE2E2" stroke="#DC2626" stroke-width="3"/>
+<text x="600.0" y="109.3" text-anchor="middle" font-size="32" font-weight="700" fill="#7F1D1D">4  AUDIT LAYER</text>
+<text x="600.0" y="144.1" text-anchor="middle" font-size="26" font-weight="400" fill="#7F1D1D">independent auditors check the record against the work</text>
+<rect x="30" y="164" width="1140" height="82" rx="14" fill="#E2E8F0" stroke="#334155" stroke-width="3"/>
+<text x="600.0" y="199.3" text-anchor="middle" font-size="32" font-weight="700" fill="#0F172A">3  GATE</text>
+<text x="600.0" y="234.1" text-anchor="middle" font-size="26" font-weight="400" fill="#0F172A">no signed, audited record, no merge</text>
+<rect x="30" y="254" width="1140" height="82" rx="14" fill="#FEF3C7" stroke="#D97706" stroke-width="3"/>
+<text x="600.0" y="289.3" text-anchor="middle" font-size="32" font-weight="700" fill="#78350F">2  ATTEST</text>
+<text x="600.0" y="324.1" text-anchor="middle" font-size="26" font-weight="400" fill="#78350F">the builder reviews, edits and signs the record</text>
+<rect x="30" y="346" width="240" height="56" rx="14" fill="#F3F4F6" stroke="#6B7280" stroke-width="3"/>
+<text x="150.0" y="383.8" text-anchor="middle" font-size="28" font-weight="700" fill="#111827">Model</text>
+<polyline points="270,374 310,374" fill="none" stroke="#334155" stroke-width="4" stroke-linejoin="round" marker-end="url(#m334155)"/>
+<rect x="30" y="410" width="240" height="56" rx="14" fill="#F3F4F6" stroke="#6B7280" stroke-width="3"/>
+<text x="150.0" y="447.8" text-anchor="middle" font-size="28" font-weight="700" fill="#111827">View</text>
+<polyline points="270,438 310,438" fill="none" stroke="#334155" stroke-width="4" stroke-linejoin="round" marker-end="url(#m334155)"/>
+<rect x="30" y="474" width="240" height="56" rx="14" fill="#F3F4F6" stroke="#6B7280" stroke-width="3"/>
+<text x="150.0" y="511.8" text-anchor="middle" font-size="28" font-weight="700" fill="#111827">Controller</text>
+<polyline points="270,502 310,502" fill="none" stroke="#334155" stroke-width="4" stroke-linejoin="round" marker-end="url(#m334155)"/>
+<rect x="310" y="346" width="300" height="184" rx="14" fill="#EDE9FE" stroke="#7C3AED" stroke-width="3"/>
+<text x="460.0" y="385.4" text-anchor="middle" font-size="28" font-weight="700" fill="#2E1065">1  LEDGER LAYER</text>
+<text x="460.0" y="417.1" text-anchor="middle" font-size="24" font-weight="400" fill="#2E1065">drafts the record,</text>
+<text x="460.0" y="448.3" text-anchor="middle" font-size="24" font-weight="400" fill="#2E1065">the diagram update,</text>
+<text x="460.0" y="479.5" text-anchor="middle" font-size="24" font-weight="400" fill="#2E1065">the spec link and</text>
+<text x="460.0" y="510.7" text-anchor="middle" font-size="24" font-weight="400" fill="#2E1065">a hash of the change</text>
+<rect x="640" y="346" width="530" height="184" rx="14" fill="#CCFBF1" stroke="#0D9488" stroke-width="3"/>
+<text x="905.0" y="414.7" text-anchor="middle" font-size="30" font-weight="700" fill="#134E4A">RECORD, in the repo</text>
+<text x="905.0" y="448.9" text-anchor="middle" font-size="26" font-weight="400" fill="#134E4A">decision, diagram,</text>
+<text x="905.0" y="482.8" text-anchor="middle" font-size="26" font-weight="400" fill="#134E4A">spec link, change hash</text>
+<polyline points="610,438 640,438" fill="none" stroke="#334155" stroke-width="4" stroke-linejoin="round" marker-end="url(#m334155)"/>
+<text x="30" y="555.7" text-anchor="start" font-size="22" font-weight="400" fill="#4B5563">Your application, any architecture pattern</text>
+<text x="30" y="588.1" text-anchor="start" font-size="26" font-weight="700" fill="#78350F">The harder a change is to undo, the deeper the audit.</text>
+<text x="30" y="615.7" text-anchor="start" font-size="22" font-weight="400" fill="#111827">Ledger means a record of decisions kept with the code. It is not a blockchain.</text>
 </svg>

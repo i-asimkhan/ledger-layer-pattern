@@ -11,7 +11,9 @@ The key words MUST, MUST NOT, SHOULD, SHOULD NOT and MAY are to be read as descr
 - **Record:** a text document that explains a change and carries its evidence (section 2).
 - **Builder:** the named person responsible for a change. Builders use whatever tools they like.
 - **Auditor:** a named person, other than the builder, who checks the record against the work.
-- **Ledger:** the tooling that drafts records. The word means a record of decisions. It does not mean a blockchain.
+- **Ledger layer:** the layer of the architecture that runs beside every layer that implements behaviour. It drafts
+  the record, proposes the diagram update, links the spec or story, and hashes the change (section 3). "Ledger"
+  means a record of decisions. It does not mean a blockchain.
 - **Gate:** the automated check that decides whether a change may merge.
 - **Reversibility:** how hard a change is to undo: *easy*, *hard*, or *cannot be undone*.
 
@@ -27,9 +29,11 @@ hash** computed over the content of those files.
 2.4 A record SHOULD link the specification or story the change belongs to, and SHOULD state the
 reversibility of the change.
 
-2.5 Once an audit has passed, the decision content of a record MUST NOT be changed. A later decision
-SHOULD supersede it by a new record that links to it. Implementations MAY enforce this with repository
-rules such as code owners.
+2.5 Once an audit has passed, the decision text of a record (context, decision, alternatives, consequences) is
+**frozen** and MUST NOT be changed. Audit results are appended to the record. A later decision SHOULD supersede
+it with a new record that links to it. This follows the practice for architecture decision records (Nygard;
+described by Fowler: an accepted record is superseded, not edited). Implementations MAY enforce it with
+repository rules such as code owners.
 
 ## 3. The Ledger layer
 
@@ -93,13 +97,11 @@ the explain-back is not required, and an organisation MAY run it on a sample.
 - (e) a check that the policy requires for this change is missing;
 - (f) the change hash in the record no longer matches the code.
 
-6.2 The gate MUST evaluate required checks against the **current** policy, not the level the record
-claims for itself.
+6.2 The gate MUST evaluate required checks against the **base branch's policy**: not the level the record
+claims for itself, and not a policy file inside the change under test (or another source that the change
+cannot modify). Otherwise a change could loosen its own rules, for example by ignoring every file.
 
 6.3 The gate SHOULD be configured as a required status check, so that it cannot be skipped.
-
-6.4 The gate MUST read the policy from the **base branch** (or from another source that the change under test
-cannot modify). Otherwise a change could loosen its own rules, for example by ignoring every file.
 
 ## 7. Policy
 
@@ -124,7 +126,7 @@ with the audit scope pinned to an exact version of the code.
 
 ## 9. Conformance
 
-An implementation conforms to v0.1 if it satisfies every MUST in sections 2 to 7. Sections 8 and 9
-describe organisational practice and are not machine-checkable. The reference implementation in this
+An implementation conforms to v0.1 if it satisfies every MUST in sections 2 to 7. Section 8
+describes organisational practice and is not machine-checkable. The reference implementation in this
 repository is an illustration, not a conforming product. It does not enforce 2.5, it does not propose diagram
 updates (3.2b), and it records attestation as a typed name (4.4).

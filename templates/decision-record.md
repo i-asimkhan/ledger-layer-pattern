@@ -1,6 +1,8 @@
 ---
 # This is the real record format the `ledger` CLI reads and writes: Markdown with YAML front matter.
 # Fictional placeholder values only. Keep the record to about a page.
+# Once an audit passes, the decision text below is frozen (SPEC 2.5): audit results are appended, and a later
+# decision supersedes this one with a new record. It is not edited.
 id: "0000"
 title: Short title of the decision
 status: proposed            # proposed | attested | accepted (after a passing audit); later: superseded
@@ -8,7 +10,7 @@ covers:                     # the files this record is about
   - path/to/file.py
 spec: STORY-0             # link or id of the spec or story
 reversibility: easy         # easy | hard | cannot_undo  (the policy decides; this sets how deep the audit goes)
-change_hash: sha256:...     # computed by the tool over the covered files
+change_hash: sha256:...     # computed by the tool: a hash of the covered files' contents (line endings normalised)
 drafted_by: template        # how the draft was made (template or a provider name)
 draft_body_hash: sha256:... # computed by the tool, so "edited by builder" cannot be self-reported
 attested_by: null           # the builder's name, set by `ledger attest`
