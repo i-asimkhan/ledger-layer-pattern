@@ -31,15 +31,24 @@ reversibility of the change.
 SHOULD supersede it by a new record that links to it. Implementations MAY enforce this with repository
 rules such as code owners.
 
-## 3. The Ledger
+## 3. The Ledger layer
 
-3.1 The Ledger SHOULD draft a record for every change that needs one.
+3.1 The **Ledger layer** is a layer of the system's architecture that runs *beside* the layers that implement
+behaviour (Model, View and Controller; MVVM; MVP; hexagonal; or any other pattern), not inside them. It does not
+change what the application does. It watches changes and produces the evidence for them.
 
-3.2 A drafted record MUST state how it was drafted (for example, the name of the template or provider).
+3.2 For every change that needs a record, the Ledger layer SHOULD:
 
-3.3 The Ledger MUST NOT attest or audit a record. Those are human acts.
+- (a) draft the record (section 2);
+- (b) propose an update to each architecture diagram the change affects;
+- (c) link the specification or story the change belongs to;
+- (d) compute the change hash.
 
-3.4 The Ledger MAY use any drafting method, including a plain offline template. This specification does
+3.3 A drafted record MUST state how it was drafted (for example, the name of the template or provider).
+
+3.4 The Ledger layer MUST NOT attest or audit a record. Those are human acts.
+
+3.5 The Ledger layer MAY use any drafting method, including a plain offline template. This specification does
 not depend on any particular tool or model.
 
 ## 4. Attestation
@@ -51,6 +60,11 @@ and SHOULD NOT rely on the builder to report it.
 
 4.3 Implementations SHOULD flag a record that was attested with zero edits to a drafted text, and MAY
 treat it as a failure.
+
+4.4 This specification does not prescribe how a person's identity is established. The reference
+implementation records a **typed name**, which anyone can type, so it proves nothing about who signed.
+Real use SHOULD tie attestation and audit to an authenticated identity (for example signed commits, or
+pull request approvals by named accounts).
 
 ## 5. Audit
 
@@ -64,8 +78,9 @@ treat it as a failure.
 5.4 The audit result MUST be recorded in the record, with the auditor's identity, the date, the result of
 each check and a short note for the comprehension and behaviour checks.
 
-5.5 An organisation MAY sample explain-backs at low reversibility levels. It SHOULD NOT sample them for
-changes that cannot be undone.
+5.5 Under the default policy (7.3), the explain-back is **required** for every *hard* and every *cannot be
+undone* change, and the stress test is required for every change that cannot be undone. For *easy* changes
+the explain-back is not required, and an organisation MAY run it on a sample.
 
 ## 6. The gate
 
@@ -82,6 +97,9 @@ changes that cannot be undone.
 claims for itself.
 
 6.3 The gate SHOULD be configured as a required status check, so that it cannot be skipped.
+
+6.4 The gate MUST read the policy from the **base branch** (or from another source that the change under test
+cannot modify). Otherwise a change could loosen its own rules, for example by ignoring every file.
 
 ## 7. Policy
 
@@ -108,4 +126,5 @@ with the audit scope pinned to an exact version of the code.
 
 An implementation conforms to v0.1 if it satisfies every MUST in sections 2 to 7. Sections 8 and 9
 describe organisational practice and are not machine-checkable. The reference implementation in this
-repository is a demo and does not implement everything above (for example, it does not enforce 2.5).
+repository is an illustration, not a conforming product. It does not enforce 2.5, it does not propose diagram
+updates (3.2b), and it records attestation as a typed name (4.4).

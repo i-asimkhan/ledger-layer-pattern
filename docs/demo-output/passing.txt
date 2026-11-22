@@ -1,6 +1,7 @@
 # 8. Signed, audited, and the hash matches. The gate passes.
 $ ledger check --base main
+policy: read from main, not from this branch
 PASS  app/model/order.py  (record 0001)
-PASS  db/migrations/002_add_discount.sql  (record 0001)
+PASS  db/migrations/003_add_discount.sql  (record 0001)
 gate: PASS (2 changed file(s) covered by signed, audited records)
 (exit code 0)

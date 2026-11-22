@@ -25,7 +25,9 @@ def changed_files(root: Path, base: str) -> list:
     out = subprocess.run(["git", "-C", str(root), "diff", "--name-only", "--relative", "--no-renames",
                           f"{base}...HEAD"], capture_output=True, text=True)
     if out.returncode != 0:
-        raise SystemExit(f"git diff against '{base}' failed: {out.stderr.strip()}")
+        raise SystemExit(f"git diff against '{base}' failed: {out.stderr.strip()}\n"
+                         "hint: the base branch and its history must be available. In GitHub Actions, "
+                         "use the ledger action (it fetches them), or checkout with fetch-depth: 0.")
     return [p for p in out.stdout.splitlines() if p]
 
 
@@ -55,9 +57,10 @@ def verify_record(root: Path, policy: Policy, rec: Record):
 
 
 def check(root: Path, base: str) -> list:
-    """Check every changed file that needs a record. Returns a list of Findings."""
+    """Check every changed file that needs a record. Returns a list of Findings.
+    The policy comes from the base branch (see Policy.load_from_base), never from the change under test."""
     root = Path(root)
-    policy = Policy.load(root)
+    policy, _ = Policy.load_from_base(root, base)
     records = sorted(load_all(root / policy.records_dir), key=lambda r: r.id, reverse=True)  # newest first
     cache, findings = {}, []
     for path in changed_files(root, base):

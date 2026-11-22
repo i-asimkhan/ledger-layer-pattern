@@ -36,6 +36,8 @@ def cmd_audit(a):
 
 
 def cmd_check(a):
+    _, source = Policy.load_from_base(Path(a.root), a.base)
+    print(f"policy: {source}")
     findings = check_mod.check(Path(a.root), a.base)
     if not findings:
         print("gate: no changed files need a record. PASS")

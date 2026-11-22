@@ -1,0 +1,17 @@
+name: gate-demo
+
+# Runs the Ledger gate (this repository's own action) on pull requests that touch the demo app.
+# A change to demo-app needs a signed, audited record in demo-app/records/, or the gate refuses it.
+on:
+  pull_request:
+    paths:
+      - "reference-implementation/demo-app/**"
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./
+        with:
+          root: reference-implementation/demo-app

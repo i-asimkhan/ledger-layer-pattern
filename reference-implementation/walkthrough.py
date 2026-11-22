@@ -62,7 +62,7 @@ def main():
     model.write_text(model.read_text() + "\n    def discounted_total(self) -> float:\n"
                      "        qty = sum(self.items.values())\n"
                      "        return round(self.total() * (0.9 if qty >= 10 else 1.0), 2)\n", encoding="utf-8", newline="\n")
-    (root / "db/migrations/002_add_discount.sql").write_text(
+    (root / "db/migrations/003_add_discount.sql").write_text(
         "-- Fictional migration for the demo app.\nALTER TABLE orders ADD COLUMN discount_pct INTEGER DEFAULT 0;\n",
         encoding="utf-8", newline="\n")
     git(root, "add", "-A")
@@ -74,7 +74,7 @@ def main():
 
     say("flow", "# 3. The Ledger drafts a record for the change (offline template).")
     ledger(root, "flow", "draft", "--title", "Add bulk discount", "--spec", "BAKE-17",
-           "--files", "app/model/order.py", "db/migrations/002_add_discount.sql")
+           "--files", "app/model/order.py", "db/migrations/003_add_discount.sql")
     rec = next((root / "records").glob("0001-*.md"))
     text = rec.read_text(encoding="utf-8")
     text = text.replace("TODO: say why the change is needed.", "Customers who buy ten or more items asked for a discount.")

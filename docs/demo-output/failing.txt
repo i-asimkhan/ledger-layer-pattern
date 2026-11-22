@@ -1,26 +1,29 @@
 # 2. The pull request has no Ledger record. The gate refuses it.
 $ ledger check --base main
+policy: read from main, not from this branch
 FAIL  app/model/order.py
       - no Ledger record covers this file
-FAIL  db/migrations/002_add_discount.sql
+FAIL  db/migrations/003_add_discount.sql
       - no Ledger record covers this file
 gate: FAIL (2 of 2 changed file(s) not covered by a signed, audited record)
 (exit code 1)
 
 # 5. Signed, but not audited yet. The gate still refuses.
 $ ledger check --base main
+policy: read from main, not from this branch
 FAIL  app/model/order.py  (record 0001)
       - not audited (audit status: pending)
-FAIL  db/migrations/002_add_discount.sql  (record 0001)
+FAIL  db/migrations/003_add_discount.sql  (record 0001)
       - not audited (audit status: pending)
 gate: FAIL (2 of 2 changed file(s) not covered by a signed, audited record)
 (exit code 1)
 
 # 9. Someone edits the model after the audit. The record and the code have drifted.
 $ ledger check --base main
+policy: read from main, not from this branch
 FAIL  app/model/order.py  (record 0001)
       - the record and the code have drifted: the change hash no longer matches
-FAIL  db/migrations/002_add_discount.sql  (record 0001)
+FAIL  db/migrations/003_add_discount.sql  (record 0001)
       - the record and the code have drifted: the change hash no longer matches
 gate: FAIL (2 of 2 changed file(s) not covered by a signed, audited record)
 (exit code 1)

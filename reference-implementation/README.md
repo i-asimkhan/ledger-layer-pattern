@@ -1,7 +1,7 @@
 # Reference implementation
 
 A small, runnable demo of the pattern on a fictional bakery ordering app. It shows the idea. It is not
-a product, and it does not implement everything in [SPEC.md](../SPEC.md).
+a product: an **illustration** of the idea. It does not implement everything in [SPEC.md](../SPEC.md).
 
 ## The 60-second walkthrough
 
@@ -69,18 +69,24 @@ root shows the workflow (about three lines). The action has not been run on GitH
 ## Tests
 
 ```bash
-pytest        # 13 tests
+pytest        # 15 tests
 ```
 
 They cover the policy, the hash, and the gate: missing record, unattested, unaudited, passing flow, drift,
-auditing your own work, depth by reversibility, the policy being re-read at check time, the zero-edit flag,
-pluggable providers and the computed "edited" flag.
+auditing your own work, depth by reversibility, the policy being re-read at check time, a pull request that
+tries to loosen its own gate, first adoption (no policy on the base branch yet), the zero-edit flag, pluggable
+providers and the computed "edited" flag.
 
 ## Limits (honest)
 
 - Names are text. The demo does not use cryptographic signatures. Use pull request identities and branch
   protection to establish who did what.
 - The change hash covers whole files, not a diff.
-- Records are not locked after audit. SPEC 2.5 says they should be. Use code owners or repository rules.
+- Records are not locked after audit. SPEC 2.5 says they should be. A pull request could also edit an
+  existing record, because the gate reads records from the branch under test. Use code owners or repository
+  rules to protect `records/`.
+- The gate reads the **policy** from the base branch, so a pull request cannot loosen its own gate. Only when
+  the base branch has no `ledger.yml` yet (first adoption) does it use the branch's policy, and it prints a warning.
+- The Ledger does not propose diagram updates (SPEC 3.2b). It drafts the record, links the spec and hashes the change.
 - It checks files in the repository. It cannot see operations, keys or infrastructure.
 - The package is about 400 lines including the CLI and comments, so it is small enough to read in one sitting.

@@ -51,7 +51,7 @@ The rules, in short (the normative version is [SPEC.md](SPEC.md)):
 | Check | What it asks | How |
 |---|---|---|
 | **Consistency** | Does the code match the signed record? | Automatic, from the pinned change hash |
-| **Comprehension** | Can the builder explain the change? | The auditor asks for an "explain-back" in the builder's own words; recorded; sampled more as risk rises |
+| **Comprehension** | Can the builder explain the change? | The auditor asks for an "explain-back" in the builder's own words; recorded; required for hard and irreversible changes, optional (or sampled) for easy ones |
 | **Behaviour** | Does the system hold up? | Independent stress and adversarial testing |
 
 A record that the builder signed with **zero edits** to the drafted text is flagged.
@@ -59,7 +59,7 @@ A record that the builder signed with **zero edits** to the drafted text is flag
 ### Irreversibility sets audit depth
 
 The harder a change is to undo, the deeper the audit. A policy file maps paths to levels, and levels to
-required checks. This is a sketch of the idea (the demo implements it):
+required checks. This is the default policy ([SPEC.md](SPEC.md) section 7.3), and the demo implements it:
 
 | Reversibility | Required checks |
 |---|---|
@@ -90,14 +90,16 @@ required checks. This is a sketch of the idea (the demo implements it):
 
 ## Try it
 
-The reference implementation is a small fictional demo (a bakery ordering app). It is a demo of the
-idea, not a product.
+The reference implementation is a small fictional demo (a bakery ordering app). It is an **illustration** of
+the idea, not a product. Names are typed text, so an attestation proves nothing about who really signed
+(see [SPEC.md](SPEC.md) section 4.4). The gate reads its policy from the base branch, so a pull request cannot
+switch it off.
 
 ```bash
 cd reference-implementation
 pip install -e ".[test]"
 python walkthrough.py        # a 60-second scripted walkthrough
-pytest                       # 13 tests
+pytest                       # 15 tests
 ```
 
 Use the gate in a pull request workflow. The action is [action.yml](action.yml) (the `v0.1` tag exists
@@ -110,7 +112,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with: { fetch-depth: 0 }
       - uses: i-asimkhan/ledger-layer-pattern@v0.1
 ```
 

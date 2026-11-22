@@ -1,35 +1,39 @@
 # Audit note
 
-<!-- Fictional example values only. One note per audited change or stage. -->
+<!--
+For audits of work that has no code diff (a requirements or design audit, a release check), or for a longer
+write-up than the record's `audit:` block holds. For code changes the `audit:` block of the record is the
+audit record. Fictional placeholder values only. One note per audited item.
+-->
 
 Stage: requirements | design | code | test | release
-Record: <link to the decision record this note covers>
-Auditor: <name>                       <!-- never the builder of the work -->
-Date: <date>
+Record: [link to the decision record this note belongs to]
+Auditor: [name]                       <!-- never the builder of the work -->
+Date: [date]
 
 ## Scope
 
-<What was examined, and which version (hash or commit).>
+What was examined, and which version (hash or commit).
 
 ## Reversibility and depth
 
 Reversibility: easy | hard | cannot be undone
-Depth applied: <which of the three checks were run, and why>
+Checks required by the policy for that level: [consistency | + explain-back | + stress test]
 
 ## Checks performed
 
-- Consistency: <result>
-- Comprehension (explain-back): <result>
-- Behaviour (stress / adversarial testing): <result>
+- Consistency: [pass | fail, and how it was checked]
+- Explain-back: [who asked, and a short note of what the builder explained, in their own words]
+- Stress / adversarial testing: [what was run, and the result]
 
 ## Findings
 
-<Each finding: what, where, how severe, what follows.>
+Each finding: what, where, how severe, what follows.
 
 ## Outcome
 
-pass | needs-changes | fail
+pass | needs-changes
 
 ## Follow-up
 
-<Re-check needed? By whom? By when?>
+Re-check needed? By whom? By when?

@@ -1,5 +1,6 @@
 """The policy file (ledger.yml): which paths are how hard to undo, and what each level requires."""
 import re
+import subprocess
 from pathlib import Path
 
 import yaml
@@ -46,6 +47,18 @@ class Policy:
         if not path.is_file():
             raise SystemExit(f"no policy file at {path}")
         return cls(yaml.safe_load(path.read_text(encoding="utf-8")) or {})
+
+    @classmethod
+    def load_from_base(cls, root, base: str):
+        """Return (policy, source). The gate reads ledger.yml as it is on the BASE branch, so a pull request
+        cannot loosen its own rules. Only if the base has no policy yet (first adoption) does it fall back
+        to the policy in this branch, and it says so."""
+        out = subprocess.run(["git", "-C", str(root), "show", f"{base}:./ledger.yml"], capture_output=True,
+                             text=True, encoding="utf-8")
+        if out.returncode == 0:
+            return cls(yaml.safe_load(out.stdout) or {}), f"read from {base}, not from this branch"
+        return cls.load(root), (f"WARNING: no ledger.yml on {base}; using the one in this branch "
+                                "(acceptable for first adoption only)")
 
     def ignored(self, path: str) -> bool:
         return any(rx.match(path) for rx in self.ignore)

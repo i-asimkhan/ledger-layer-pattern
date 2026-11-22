@@ -28,5 +28,20 @@ runs:
         INPUT_ROOT: ${{ inputs.root }}
         BASE_REF: ${{ github.base_ref }}
       run: |
-        base="${INPUT_BASE:-origin/${BASE_REF:-main}}"
+        set -euo pipefail
+        base="${INPUT_BASE}"
+        if [ -z "$base" ]; then
+          if [ -z "${BASE_REF}" ]; then
+            echo "::error::Run this action on pull_request events, or set the 'base' input."
+            exit 1
+          fi
+          base="origin/${BASE_REF}"
+        fi
+        # Make the base branch and its history available, so a plain actions/checkout (depth 1) is enough.
+        if [ "$(git rev-parse --is-shallow-repository)" = "true" ]; then
+          git fetch --no-tags --quiet --unshallow
+        fi
+        case "$base" in
+          origin/*) git fetch --no-tags --quiet origin "+refs/heads/${base#origin/}:refs/remotes/${base}" ;;
+        esac
         ledger --root "$INPUT_ROOT" check --base "$base"

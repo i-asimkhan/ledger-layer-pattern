@@ -8,11 +8,11 @@ from ledger import draft as draft_mod
 from ledger.policy import Policy, glob_to_regex
 from ledger.records import Record, change_hash, find
 
-from conftest import commit_change
+from conftest import commit_change, git
 
 VIEW = "app/view/order_view.py"            # level: easy
 MODEL = "app/model/order.py"               # level: hard
-MIGRATION = "db/migrations/002_add_notes.sql"  # level: cannot_undo
+MIGRATION = "db/migrations/003_add_notes.sql"  # level: cannot_undo
 
 
 def result(root):
@@ -138,12 +138,45 @@ def test_zero_edit_is_flagged(repo):
     full_flow(repo, [VIEW], edit=False)
     f = result(repo)[VIEW]
     assert f.ok and any("zero edits" in w for w in f.warnings)
-    # and it can be made a hard failure
+    # it can be made a hard failure, but the rule must change on the base branch (main), not in the pull request
+    git(repo, "checkout", "main")
     policy_file = repo / "ledger.yml"
     policy_file.write_text(policy_file.read_text().replace("zero_edit: warn", "zero_edit: fail"), encoding="utf-8")
-    commit_change(repo, "app/view/extra.py", "# extra\n")  # keep git state simple
-    findings = {x.path: x for x in check_mod.check(repo, "main")}
-    assert not findings[VIEW].ok and any("zero edits" in p for p in findings[VIEW].problems)
+    git(repo, "add", "-A")
+    git(repo, "commit", "-m", "make zero-edit signatures fail")
+    git(repo, "checkout", "feature")
+    git(repo, "merge", "main", "--no-edit")
+    assert not result(repo)[VIEW].ok and any("zero edits" in p for p in result(repo)[VIEW].problems)
+
+
+def test_a_pull_request_cannot_loosen_its_own_gate(repo):
+    """The policy is read from the base branch. Editing ledger.yml in the branch must not switch the gate off."""
+    policy_file = repo / "ledger.yml"
+    policy_file.write_text(policy_file.read_text().replace("ignore:\n", 'ignore:\n  - "**"\n'), encoding="utf-8")
+    commit_change(repo, VIEW, "# changed in the same pull request\n")
+    findings = result(repo)
+    assert not findings[VIEW].ok and "no Ledger record" in findings[VIEW].problems[0]
+    assert not findings["ledger.yml"].ok  # changing the policy needs an audited record too
+    _, source = Policy.load_from_base(repo, "main")
+    assert source.startswith("read from main")
+
+
+def test_first_adoption_falls_back_with_a_warning(tmp_path):
+    import shutil
+    from conftest import DEMO, git
+
+    root = tmp_path / "shop"
+    shutil.copytree(DEMO, root)
+    (root / "ledger.yml").rename(tmp_path / "ledger.yml.hold")  # main has no policy yet
+    for args in (("init", "-b", "main"), ("config", "user.name", "T"), ("config", "user.email", "t@example.invalid"),
+                 ("config", "commit.gpgsign", "false"), ("add", "-A"), ("commit", "-m", "initial"),
+                 ("checkout", "-b", "feature")):
+        git(root, *args)
+    (tmp_path / "ledger.yml.hold").rename(root / "ledger.yml")
+    commit_change(root, VIEW, "# changed\n")
+    _, source = Policy.load_from_base(root, "main")
+    assert source.startswith("WARNING")
+    assert not check_mod.check(root, "main")[0].ok  # the branch's policy still applies, so the gate still works
 
 
 # ---- drafting ------------------------------------------------------------

@@ -23,8 +23,9 @@ problem this pattern is aimed at.
 ## Won't it slow us down?
 
 It adds work, and I won't pretend otherwise. Three things keep it manageable: the Ledger drafts the record
-for you, audit depth scales with how hard a change is to undo (a small reversible change needs only the
-automatic consistency check), and you can start with one risky area instead of the whole codebase. The
+for you, audit depth scales with how hard a change is to undo (under the default policy, an easy change needs
+only the automatic consistency check; hard and irreversible changes also need an explain-back, and
+irreversible ones an independent stress test), and you can start with one risky area instead of the whole codebase. The
 argument for the cost is that building has become cheaper, and part of that saving is worth reinvesting in
 assurance. That is an argument, not a measurement. I do not have cost data.
 
@@ -50,7 +51,7 @@ a record, and an independent audit.
 ## Who audits the auditors?
 
 Honestly, this is partly open. In a small team, the next stage of work tends to expose mistakes in the
-previous one (testing exposes development problems, pilots expose testing gaps), and audits are sampled.
+previous one (testing exposes development problems, pilots expose testing gaps), and some checks are sampled.
 In larger or high-sensitivity settings, a separate audit function reporting outside delivery, and external
 auditors, add independence. The IIA's Three Lines Model describes internal audit as an independent third
 line with external assurance providers alongside ([source](https://www.theiia.org/globalassets/documents/resources/the-iias-three-lines-model-an-update-of-the-three-lines-of-defense-july-2020/three-lines-model-updated-english.pdf)).
