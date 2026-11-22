@@ -51,7 +51,7 @@ def main():
     args = ap.parse_args()
 
     root = Path(tempfile.mkdtemp(prefix="ledger-demo-")) / "bakery"
-    shutil.copytree(DEMO, root)
+    shutil.copytree(DEMO, root, ignore=shutil.ignore_patterns('0*.md', '__pycache__'))
     for cmd in (["init", "-b", "main"], ["config", "user.name", "Demo"], ["config", "user.email", "demo@example.invalid"],
                 ["config", "commit.gpgsign", "false"], ["add", "-A"], ["commit", "-m", "initial"],
                 ["checkout", "-b", "feature/bulk-discount"]):
