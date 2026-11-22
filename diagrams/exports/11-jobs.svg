@@ -31,5 +31,5 @@
 <rect x="629.5" y="473" width="61" height="26" rx="6" fill="#FFFFFF"/>
 <text x="660.0" y="491.6" text-anchor="middle" font-size="16" font-weight="700" fill="#334155">rotate</text>
 <text x="40" y="541.4" text-anchor="start" font-size="24" font-weight="700" fill="#111827">Nobody audits their own work.</text>
-<text x="40" y="576.0" text-anchor="start" font-size="17" font-weight="400" fill="#4B5563">Bars are an illustration, not data. The author&#x27;s view of the next 10-20 years, not a forecast from data.</text>
+<text x="40" y="576.0" text-anchor="start" font-size="17" font-weight="400" fill="#4B5563">Box sizes are an illustration, not data. The author&#x27;s view of the next 10-20 years, not a forecast from data.</text>
 </svg>

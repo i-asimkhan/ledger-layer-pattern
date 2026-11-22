@@ -36,6 +36,6 @@ Notes:
   and external audit report up to the governing body. **06** uses the IV&V terms technical, managerial and financial
   independence.
 - **12** is a UML-style sequence diagram for engineers; SPEC.md Appendix A has the same diagram in Mermaid.
-- **11** is the author's view of the next 10-20 years, not a forecast from data. Its bar lengths are an illustration.
+- **11** is the author's view of the next 10-20 years, not a forecast from data. Its box sizes are an illustration.
 - The `.drawio` files are the light versions. The exports were rendered from the same layout, so they match. If you
   open a `.drawio` file in draw.io and re-export, small text spacing differences are normal.
