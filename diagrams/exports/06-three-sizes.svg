@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="627" viewBox="0 0 1200 627" font-family="Segoe UI, Arial, Helvetica, sans-serif">
+<rect width="1200" height="627" fill="#FFFFFF"/>
+<defs>
+<marker id="mDC2626" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker>
+</defs>
+<text x="40" y="55.9" text-anchor="start" font-size="34" font-weight="700" fill="#111827">Independence grows with risk: one pattern, three sizes</text>
+<text x="40" y="109.1" text-anchor="start" font-size="26" font-weight="700" fill="#7F1D1D">more independence, deeper audit</text>
+<polyline points="40,128 1160,128" fill="none" stroke="#DC2626" stroke-width="5" stroke-linejoin="round" marker-end="url(#mDC2626)"/>
+<rect x="40" y="345" width="350" height="180" rx="14" fill="#FEE2E2" stroke="#DC2626" stroke-width="3"/>
+<text x="215.0" y="399.9" text-anchor="middle" font-size="28" font-weight="700" fill="#7F1D1D">SMALL TEAM</text>
+<text x="215.0" y="430.6" text-anchor="middle" font-size="23" font-weight="400" fill="#7F1D1D">Internal audit by someone</text>
+<text x="215.0" y="460.5" text-anchor="middle" font-size="23" font-weight="400" fill="#7F1D1D">who did not build it</text>
+<text x="215.0" y="490.4" text-anchor="middle" font-size="23" font-weight="400" fill="#7F1D1D">Independence: technical</text>
+<rect x="425" y="255" width="350" height="270" rx="14" fill="#FEE2E2" stroke="#DC2626" stroke-width="3"/>
+<text x="600.0" y="340.0" text-anchor="middle" font-size="28" font-weight="700" fill="#7F1D1D">LARGE ORGANISATION</text>
+<text x="600.0" y="370.7" text-anchor="middle" font-size="23" font-weight="400" fill="#7F1D1D">A separate audit function</text>
+<text x="600.0" y="400.6" text-anchor="middle" font-size="23" font-weight="400" fill="#7F1D1D">reporting outside delivery</text>
+<text x="600.0" y="430.5" text-anchor="middle" font-size="23" font-weight="400" fill="#7F1D1D">Independence: technical,</text>
+<text x="600.0" y="460.4" text-anchor="middle" font-size="23" font-weight="400" fill="#7F1D1D">managerial, financial</text>
+<rect x="810" y="165" width="350" height="360" rx="14" fill="#FEE2E2" stroke="#DC2626" stroke-width="3"/>
+<text x="985.0" y="280.1" text-anchor="middle" font-size="28" font-weight="700" fill="#7F1D1D">HIGH SENSITIVITY</text>
+<text x="985.0" y="310.8" text-anchor="middle" font-size="23" font-weight="400" fill="#7F1D1D">Add external auditors</text>
+<text x="985.0" y="340.6" text-anchor="middle" font-size="23" font-weight="400" fill="#7F1D1D">Scope pinned to an</text>
+<text x="985.0" y="370.6" text-anchor="middle" font-size="23" font-weight="400" fill="#7F1D1D">exact version of the code</text>
+<text x="985.0" y="400.4" text-anchor="middle" font-size="23" font-weight="400" fill="#7F1D1D">Independence: all three,</text>
+<text x="985.0" y="430.4" text-anchor="middle" font-size="23" font-weight="400" fill="#7F1D1D">plus outside assurance</text>
+<text x="40" y="569.4" text-anchor="start" font-size="22" font-weight="400" fill="#4B5563">Independence terms follow IV&amp;V: technical, managerial, financial.</text>
+<text x="40" y="598.0" text-anchor="start" font-size="22" font-weight="400" fill="#4B5563">Where a team is too small, one auditor may cover several stages.</text>
+</svg>

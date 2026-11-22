@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="610" viewBox="0 0 1200 610" font-family="Segoe UI, Arial, Helvetica, sans-serif">
+<rect width="1200" height="610" fill="#FFFFFF"/>
+<defs>
+</defs>
+<text x="40" y="55.9" text-anchor="start" font-size="34" font-weight="700" fill="#111827">One record: what was decided, who signed it, who checked it</text>
+<rect x="25" y="108" width="1150" height="440" rx="12" fill="#F0FDFA" stroke="#0D9488" stroke-width="3"/>
+<text x="45" y="139.4" text-anchor="start" font-size="24" font-weight="700" fill="#134E4A">THE RECORD: one Markdown file in the repo</text>
+<rect x="45" y="152" width="1110" height="64" rx="14" fill="#E2E8F0" stroke="#334155" stroke-width="3"/>
+<text x="600.0" y="178.8" text-anchor="middle" font-size="26" font-weight="700" fill="#0F172A">REVERSIBILITY: easy, hard, or cannot be undone</text>
+<text x="600.0" y="207.9" text-anchor="middle" font-size="22" font-weight="400" fill="#0F172A">sets how deep the audit goes</text>
+<rect x="45" y="234" width="350" height="296" rx="14" fill="#EDE9FE" stroke="#7C3AED" stroke-width="3"/>
+<text x="220.0" y="313.8" text-anchor="middle" font-size="28" font-weight="700" fill="#2E1065">DECISION</text>
+<text x="220.0" y="345.5" text-anchor="middle" font-size="24" font-weight="400" fill="#2E1065">drafted by the Ledger</text>
+<text x="220.0" y="376.7" text-anchor="middle" font-size="24" font-weight="400" fill="#2E1065">context, decision,</text>
+<text x="220.0" y="407.9" text-anchor="middle" font-size="24" font-weight="400" fill="#2E1065">alternatives,</text>
+<text x="220.0" y="439.1" text-anchor="middle" font-size="24" font-weight="400" fill="#2E1065">consequences</text>
+<text x="220.0" y="470.3" text-anchor="middle" font-size="24" font-weight="400" fill="#2E1065">spec link, change hash</text>
+<rect x="425" y="234" width="350" height="296" rx="14" fill="#FEF3C7" stroke="#D97706" stroke-width="3"/>
+<text x="600.0" y="313.8" text-anchor="middle" font-size="28" font-weight="700" fill="#78350F">ATTESTED</text>
+<text x="600.0" y="345.5" text-anchor="middle" font-size="24" font-weight="400" fill="#78350F">signed by the builder</text>
+<text x="600.0" y="376.7" text-anchor="middle" font-size="24" font-weight="400" fill="#78350F">name and date</text>
+<text x="600.0" y="407.9" text-anchor="middle" font-size="24" font-weight="400" fill="#78350F">edited by builder:</text>
+<text x="600.0" y="439.1" text-anchor="middle" font-size="24" font-weight="400" fill="#78350F">yes or no</text>
+<text x="600.0" y="470.3" text-anchor="middle" font-size="24" font-weight="400" fill="#78350F">(no is flagged)</text>
+<rect x="805" y="234" width="350" height="296" rx="14" fill="#FEE2E2" stroke="#DC2626" stroke-width="3"/>
+<text x="980.0" y="313.8" text-anchor="middle" font-size="28" font-weight="700" fill="#7F1D1D">AUDIT</text>
+<text x="980.0" y="345.5" text-anchor="middle" font-size="24" font-weight="400" fill="#7F1D1D">by a different person</text>
+<text x="980.0" y="376.7" text-anchor="middle" font-size="24" font-weight="400" fill="#7F1D1D">consistency check</text>
+<text x="980.0" y="407.9" text-anchor="middle" font-size="24" font-weight="400" fill="#7F1D1D">explain-back note</text>
+<text x="980.0" y="439.1" text-anchor="middle" font-size="24" font-weight="400" fill="#7F1D1D">stress test result</text>
+<text x="980.0" y="470.3" text-anchor="middle" font-size="24" font-weight="400" fill="#7F1D1D">status and date</text>
+<text x="40" y="590.7" text-anchor="start" font-size="22" font-weight="400" fill="#4B5563">Fictional fields. See templates/decision-record.md.</text>
+</svg>

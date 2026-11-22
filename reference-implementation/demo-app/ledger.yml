@@ -1,0 +1,32 @@
+# Ledger policy for the demo app (a fictional bakery ordering app).
+# Reversibility sets audit depth: the harder a change is to undo, the more checks it needs.
+
+records_dir: records
+
+# Files that never need a record (the records themselves are the evidence).
+ignore:
+  - "records/**"
+  - "**/*.md"
+  - ".github/**"
+
+default_reversibility: easy
+
+# First match wins. Put the hardest-to-undo paths first.
+reversibility:
+  - path: "db/migrations/**"
+    level: cannot_undo        # a data migration is hard to take back
+  - path: "ledger.yml"
+    level: hard               # changing the policy changes the rules
+  - path: "app/model/**"
+    level: hard
+  - path: "app/**"
+    level: easy
+
+# What each level requires an auditor to have done.
+required_checks:
+  easy: [consistency]
+  hard: [consistency, explain_back]
+  cannot_undo: [consistency, explain_back, stress]
+
+# What to do when the builder signs a drafted record without editing it: warn | fail
+zero_edit: warn

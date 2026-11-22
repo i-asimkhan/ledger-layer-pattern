@@ -1,0 +1,57 @@
+# 1. A builder adds a bulk discount: a model change (hard to undo) and a data migration (cannot be undone).
+
+# 2. The pull request has no Ledger record. The gate refuses it.
+$ ledger check --base main
+FAIL  app/model/order.py
+      - no Ledger record covers this file
+FAIL  db/migrations/002_add_discount.sql
+      - no Ledger record covers this file
+gate: FAIL (2 of 2 changed file(s) not covered by a signed, audited record)
+(exit code 1)
+
+# 3. The Ledger drafts a record for the change (offline template).
+$ ledger draft --title "Add bulk discount" --spec BAKE-17 --files app/model/order.py db/migrations/002_add_discount.sql
+drafted records/0001-add-bulk-discount.md  (reversibility: cannot_undo)
+next: edit the record so it is true, then run: ledger attest 0001 --by <your name>
+(exit code 0)
+
+# 4. The builder edits the record until it is true, then signs it.
+$ ledger attest 0001 --by "Avery Baker"
+attested 0001 by Avery Baker; edited by builder: yes
+(exit code 0)
+
+# 5. Signed, but not audited yet. The gate still refuses.
+$ ledger check --base main
+FAIL  app/model/order.py  (record 0001)
+      - not audited (audit status: pending)
+FAIL  db/migrations/002_add_discount.sql  (record 0001)
+      - not audited (audit status: pending)
+gate: FAIL (2 of 2 changed file(s) not covered by a signed, audited record)
+(exit code 1)
+
+# 6. The auditor, a different person, tries to pass it after an explain-back only.
+#    The migration cannot be undone, so policy also requires an independent stress test.
+$ ledger audit 0001 --auditor "Sam Reyes" --explain-back "Builder explained the ten-item rule and why the default is zero for old rows."
+cannot pass: 'cannot_undo' changes also need: stress
+(exit code 1)
+
+# 7. The auditor adds the stress test and passes it.
+$ ledger audit 0001 --auditor "Sam Reyes" --explain-back "Builder explained the ten-item rule and why the default is zero for old rows." --stress "Ran the migration twice and on a table with 10,000 fictional rows; ran quantities 0, 9, 10 and -1."
+audited 0001 by Sam Reyes: pass
+(exit code 0)
+
+# 8. Signed, audited, and the hash matches. The gate passes.
+$ ledger check --base main
+PASS  app/model/order.py  (record 0001)
+PASS  db/migrations/002_add_discount.sql  (record 0001)
+gate: PASS (2 changed file(s) covered by signed, audited records)
+(exit code 0)
+
+# 9. Someone edits the model after the audit. The record and the code have drifted.
+$ ledger check --base main
+FAIL  app/model/order.py  (record 0001)
+      - the record and the code have drifted: the change hash no longer matches
+FAIL  db/migrations/002_add_discount.sql  (record 0001)
+      - the record and the code have drifted: the change hash no longer matches
+gate: FAIL (2 of 2 changed file(s) not covered by a signed, audited record)
+(exit code 1)
