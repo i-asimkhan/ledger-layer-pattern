@@ -1,15 +1,16 @@
-"""Step 1, the Ledger: draft a record for a change. Offline template by default; providers are pluggable."""
-import importlib
+"""Step 1, the Ledger: draft a record for a change, with a plain offline template (no AI, no network)."""
 import re
 from pathlib import Path
 
 from .policy import Policy
 from .records import Record, change_hash, load_all, sha256_text
 
+DRAFTER = "template"
 
-def template_provider(files: dict) -> dict:
-    """Offline drafter. `files` maps path -> number of lines (or None if the file is gone).
-    A provider is any function with this signature that returns the four section texts."""
+
+def template_sections(files: dict) -> dict:
+    """The offline drafter. `files` maps path -> number of lines (or None if the file is gone).
+    It cannot know why a change was made, so it leaves TODOs for the builder to fill in."""
     listing = "\n".join(f"- `{p}` ({'removed' if n is None else f'{n} lines'})" for p, n in files.items())
     return {
         "context": f"This change touches {len(files)} file(s):\n\n{listing}\n\nTODO: say why the change is needed.",
@@ -17,14 +18,6 @@ def template_provider(files: dict) -> dict:
         "alternatives": "TODO: list the serious alternatives, with their pros and cons.",
         "consequences": "TODO: what becomes easier or harder, and what could go wrong.",
     }
-
-
-def load_provider(spec):
-    """`None` or 'template' -> the offline drafter. 'package.module:function' -> your own provider."""
-    if not spec or spec == "template":
-        return "template", template_provider
-    module, _, func = spec.partition(":")
-    return spec, getattr(importlib.import_module(module), func)
 
 
 def _slug(title: str) -> str:
@@ -36,14 +29,13 @@ def _next_id(records_dir: Path) -> str:
     return f"{(max(ids) + 1) if ids else 1:04d}"
 
 
-def draft(root: Path, policy: Policy, files: list, title: str, spec: str = "", provider_spec=None) -> Record:
+def draft(root: Path, policy: Policy, files: list, title: str, spec: str = "") -> Record:
     root = Path(root)
-    name, provider = load_provider(provider_spec)
     sizes = {}
     for rel in files:
         f = root / rel
         sizes[rel] = len(f.read_text(encoding="utf-8", errors="replace").splitlines()) if f.is_file() else None
-    sections = provider(sizes)
+    sections = template_sections(sizes)
     body = (f"# {title}\n\n## Context\n\n{sections['context']}\n\n## Decision\n\n{sections['decision']}\n\n"
             f"## Alternatives considered\n\n{sections['alternatives']}\n\n## Consequences\n\n{sections['consequences']}\n")
     records_dir = root / policy.records_dir
@@ -57,7 +49,7 @@ def draft(root: Path, policy: Policy, files: list, title: str, spec: str = "", p
         "spec": spec or None,
         "reversibility": policy.level_for_paths(files),
         "change_hash": change_hash(root, files),
-        "drafted_by": name,
+        "drafted_by": DRAFTER,
         "draft_body_hash": sha256_text(body),
         "attested_by": None,
         "attested_at": None,

@@ -44,8 +44,8 @@ No. It means a record of decisions kept with the code. A blockchain is not requi
 
 ## Do I need AI to use this?
 
-No. The Ledger drafts records with an offline template by default. You can plug in any drafting method.
-The pattern works whether a change was written by hand or with tools, as long as there is a named builder,
+No. The reference implementation drafts records with a plain offline template, and no AI is involved. The
+specification allows any drafting method (SPEC 3.5). The pattern works whether a change was written by hand or with tools, as long as there is a named builder,
 a record, and an independent audit.
 
 ## Who audits the auditors?
