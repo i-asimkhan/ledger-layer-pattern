@@ -25,6 +25,18 @@ Writing the reasoning down helps, but it does not close the gap on its own:
 - **A record with no audit** becomes paperwork that people sign unread.
 - **An audit with no record** leaves auditors rebuilding the reasoning from the code, which is the debt itself.
 
+## Before and after
+
+The picture most of us learned, and the same picture with the Ledger layer added. Nothing in the application
+changes; the new parts are in purple and above.
+
+![Classic MVC: three layers, none of them remembers why](diagrams/exports/08a-mvc-classic.png)
+
+![MVC + the Ledger layer: the same app, now with evidence](diagrams/exports/08b-mvc-with-ledger-layer.png)
+
+The layer does not depend on the pattern: the [MVVM before](diagrams/exports/09a-mvvm-classic.png) and
+[after](diagrams/exports/09b-mvvm-with-ledger-layer.png) look the same way.
+
 ## The pattern: four levels
 
 ```
@@ -74,6 +86,12 @@ required checks. This is the default policy ([SPEC.md](SPEC.md) section 7.3), an
 | Hard to undo | Consistency, explain-back |
 | Cannot be undone | Consistency, explain-back, independent stress test |
 
+## End to end, with people
+
+From a user's request to a trusted change, and back: when something breaks, engineers trace it through the records.
+
+![End to end: from a user's request to a trusted change](diagrams/exports/10-end-to-end.png)
+
 ## What this means for engineers
 
 *This section is the author's view, not a finding. There are no statistics here on purpose.*
@@ -90,6 +108,8 @@ required checks. This is the default policy ([SPEC.md](SPEC.md) section 7.3), an
   systems should adopt it now.
 
 ![Every build role has an audit role beside it](diagrams/exports/04-roles-rotation.png)
+
+![What this means for jobs, in the author's view](diagrams/exports/11-jobs.png)
 
 ![Independence grows with risk: one pattern, three sizes](diagrams/exports/06-three-sizes.png)
 

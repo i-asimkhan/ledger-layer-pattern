@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="627" viewBox="0 0 1200 627" font-family="Segoe UI, Arial, Helvetica, sans-serif">
+<defs>
+<marker id="m0D9488" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0D9488"/></marker>
+<marker id="m334155" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#334155"/></marker>
+</defs>
+<rect width="1200" height="627" fill="#FFFFFF"/>
+<text x="40" y="50.9" text-anchor="start" font-size="34" font-weight="700" fill="#111827">End to end: from a user&#x27;s request to a trusted change</text>
+<rect x="10" y="72" width="1180" height="76" rx="8" fill="#F8FAFC" fill-opacity="1" stroke="#E2E8F0" stroke-opacity="1" stroke-width="1"/>
+<text x="18" y="116.3" text-anchor="start" font-size="18" font-weight="700" fill="#4B5563">USERS</text>
+<rect x="10" y="152" width="1180" height="76" rx="8" fill="#F8FAFC" fill-opacity="1" stroke="#E2E8F0" stroke-opacity="1" stroke-width="1"/>
+<text x="18" y="196.3" text-anchor="start" font-size="18" font-weight="700" fill="#4B5563">PRODUCT</text>
+<rect x="10" y="232" width="1180" height="76" rx="8" fill="#F8FAFC" fill-opacity="1" stroke="#E2E8F0" stroke-opacity="1" stroke-width="1"/>
+<text x="18" y="276.3" text-anchor="start" font-size="18" font-weight="700" fill="#4B5563">BUILD</text>
+<rect x="10" y="312" width="1180" height="76" rx="8" fill="#F8FAFC" fill-opacity="1" stroke="#E2E8F0" stroke-opacity="1" stroke-width="1"/>
+<text x="18" y="356.3" text-anchor="start" font-size="18" font-weight="700" fill="#4B5563">LEDGER</text>
+<rect x="10" y="392" width="1180" height="76" rx="8" fill="#F8FAFC" fill-opacity="1" stroke="#E2E8F0" stroke-opacity="1" stroke-width="1"/>
+<text x="18" y="436.3" text-anchor="start" font-size="18" font-weight="700" fill="#4B5563">AUDIT</text>
+<rect x="10" y="472" width="1180" height="76" rx="8" fill="#F8FAFC" fill-opacity="1" stroke="#E2E8F0" stroke-opacity="1" stroke-width="1"/>
+<text x="18" y="516.3" text-anchor="start" font-size="18" font-weight="700" fill="#4B5563">RELEASE</text>
+<rect x="130" y="80" width="250" height="60" rx="14" fill="#F3F4F6" fill-opacity="1" stroke="#6B7280" stroke-width="3"/>
+<text x="255.0" y="105.3" text-anchor="middle" font-size="20" font-weight="700" fill="#111827">END USERS</text>
+<text x="255.0" y="128.8" text-anchor="middle" font-size="18" font-weight="400" fill="#111827">raise a need or a problem</text>
+<rect x="250" y="160" width="260" height="60" rx="14" fill="#F3F4F6" fill-opacity="1" stroke="#6B7280" stroke-width="3"/>
+<text x="380.0" y="185.3" text-anchor="middle" font-size="20" font-weight="700" fill="#111827">PRODUCT OWNER / BA</text>
+<text x="380.0" y="208.8" text-anchor="middle" font-size="18" font-weight="400" fill="#111827">story + spec, AI-assisted</text>
+<rect x="360" y="240" width="230" height="60" rx="14" fill="#F3F4F6" fill-opacity="1" stroke="#6B7280" stroke-width="3"/>
+<text x="475.0" y="265.3" text-anchor="middle" font-size="20" font-weight="700" fill="#111827">BUILDERS</text>
+<text x="475.0" y="288.8" text-anchor="middle" font-size="18" font-weight="400" fill="#111827">people + AI, one team</text>
+<rect x="470" y="320" width="280" height="60" rx="14" fill="#EDE9FE" fill-opacity="1" stroke="#7C3AED" stroke-width="3"/>
+<text x="610.0" y="345.3" text-anchor="middle" font-size="20" font-weight="700" fill="#2E1065">LEDGER LAYER</text>
+<text x="610.0" y="368.8" text-anchor="middle" font-size="18" font-weight="400" fill="#2E1065">drafts the record + hash</text>
+<rect x="640" y="240" width="220" height="60" rx="14" fill="#FEF3C7" fill-opacity="1" stroke="#D97706" stroke-width="3"/>
+<text x="750.0" y="265.3" text-anchor="middle" font-size="20" font-weight="700" fill="#78350F">BUILDER SIGNS</text>
+<text x="750.0" y="288.8" text-anchor="middle" font-size="18" font-weight="400" fill="#78350F">attests the record</text>
+<rect x="760" y="400" width="290" height="60" rx="14" fill="#FEE2E2" fill-opacity="1" stroke="#DC2626" stroke-width="3"/>
+<text x="905.0" y="425.3" text-anchor="middle" font-size="20" font-weight="700" fill="#7F1D1D">AUDITORS DECIDE</text>
+<text x="905.0" y="448.8" text-anchor="middle" font-size="18" font-weight="400" fill="#7F1D1D">run the three checks</text>
+<rect x="900" y="480" width="270" height="60" rx="14" fill="#E2E8F0" fill-opacity="1" stroke="#334155" stroke-width="3"/>
+<text x="1035.0" y="505.3" text-anchor="middle" font-size="20" font-weight="700" fill="#0F172A">GATE, THEN PRODUCTION</text>
+<text x="1035.0" y="528.8" text-anchor="middle" font-size="18" font-weight="400" fill="#0F172A">merges audited changes</text>
+<rect x="900" y="80" width="270" height="60" rx="14" fill="#F3F4F6" fill-opacity="1" stroke="#6B7280" stroke-width="3"/>
+<text x="1035.0" y="105.3" text-anchor="middle" font-size="20" font-weight="700" fill="#111827">END USERS</text>
+<text x="1035.0" y="128.8" text-anchor="middle" font-size="18" font-weight="400" fill="#111827">use the change</text>
+<polyline points="315,140 315,160" fill="none" stroke="#334155" stroke-width="4" stroke-linejoin="round" marker-end="url(#m334155)"/>
+<polyline points="430,220 430,240" fill="none" stroke="#334155" stroke-width="4" stroke-linejoin="round" marker-end="url(#m334155)"/>
+<polyline points="530,300 530,320" fill="none" stroke="#334155" stroke-width="4" stroke-linejoin="round" marker-end="url(#m334155)"/>
+<polyline points="700,320 700,300" fill="none" stroke="#334155" stroke-width="4" stroke-linejoin="round" marker-end="url(#m334155)"/>
+<polyline points="810,300 810,400" fill="none" stroke="#334155" stroke-width="4" stroke-linejoin="round" marker-end="url(#m334155)"/>
+<polyline points="980,460 980,480" fill="none" stroke="#334155" stroke-width="4" stroke-linejoin="round" marker-end="url(#m334155)"/>
+<polyline points="1170,510 1188,510 1188,110 1170,110" fill="none" stroke="#334155" stroke-width="4" stroke-linejoin="round" marker-end="url(#m334155)"/>
+<polyline points="900,125 878,125 878,350 750,350" fill="none" stroke="#0D9488" stroke-width="4" stroke-linejoin="round" stroke-dasharray="12 8" marker-end="url(#m0D9488)"/>
+<text x="890" y="333.9" text-anchor="start" font-size="17" font-weight="700" fill="#134E4A">something breaks?</text>
+<text x="890" y="356.0" text-anchor="start" font-size="17" font-weight="700" fill="#134E4A">trace it back through</text>
+<text x="890" y="378.1" text-anchor="start" font-size="17" font-weight="700" fill="#134E4A">the records</text>
+<rect x="30" y="570" width="26" height="26" rx="6" fill="#EDE9FE" fill-opacity="1" stroke="#7C3AED" stroke-opacity="1" stroke-width="3"/>
+<text x="66" y="590.7" text-anchor="start" font-size="22" font-weight="400" fill="#111827">tooling</text>
+<rect x="182" y="570" width="26" height="26" rx="6" fill="#CCFBF1" fill-opacity="1" stroke="#0D9488" stroke-opacity="1" stroke-width="3"/>
+<text x="218" y="590.7" text-anchor="start" font-size="22" font-weight="400" fill="#111827">record</text>
+<rect x="324" y="570" width="26" height="26" rx="6" fill="#FEF3C7" fill-opacity="1" stroke="#D97706" stroke-opacity="1" stroke-width="3"/>
+<text x="360" y="590.7" text-anchor="start" font-size="22" font-weight="400" fill="#111827">human decision</text>
+<rect x="556" y="570" width="26" height="26" rx="6" fill="#FEE2E2" fill-opacity="1" stroke="#DC2626" stroke-opacity="1" stroke-width="3"/>
+<text x="592" y="590.7" text-anchor="start" font-size="22" font-weight="400" fill="#111827">audit</text>
+<text x="30" y="616.3" text-anchor="start" font-size="18" font-weight="400" fill="#4B5563">Three checks: consistency, explain-back, stress. External auditors for high-sensitivity work.</text>
+</svg>

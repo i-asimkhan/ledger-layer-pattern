@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="627" viewBox="0 0 1200 627" font-family="Segoe UI, Arial, Helvetica, sans-serif">
+<defs>
+<marker id="m334155" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#334155"/></marker>
+</defs>
+<rect width="1200" height="627" fill="#FFFFFF"/>
+<text x="40" y="50.9" text-anchor="start" font-size="34" font-weight="700" fill="#111827">Classic MVC: three layers, none of them remembers why</text>
+<text x="40" y="137.8" text-anchor="start" font-size="24" font-weight="400" fill="#4B5563">The picture most of us learned: the user interacts with the View, the View sends input</text>
+<text x="40" y="169.0" text-anchor="start" font-size="24" font-weight="400" fill="#4B5563">to the Controller, the Controller updates the Model, and the Model notifies the View.</text>
+<rect x="20" y="262" width="130" height="70" rx="14" fill="#F3F4F6" fill-opacity="1" stroke="#6B7280" stroke-width="3"/>
+<text x="85.0" y="306.1" text-anchor="middle" font-size="26" font-weight="700" fill="#111827">User</text>
+<rect x="180" y="262" width="190" height="70" rx="14" fill="#F3F4F6" fill-opacity="1" stroke="#6B7280" stroke-width="3"/>
+<text x="275.0" y="306.8" text-anchor="middle" font-size="28" font-weight="700" fill="#111827">View</text>
+<rect x="180" y="430" width="190" height="70" rx="14" fill="#F3F4F6" fill-opacity="1" stroke="#6B7280" stroke-width="3"/>
+<text x="275.0" y="474.8" text-anchor="middle" font-size="28" font-weight="700" fill="#111827">Controller</text>
+<rect x="460" y="430" width="180" height="70" rx="14" fill="#F3F4F6" fill-opacity="1" stroke="#6B7280" stroke-width="3"/>
+<text x="550.0" y="474.8" text-anchor="middle" font-size="28" font-weight="700" fill="#111827">Model</text>
+<polyline points="150,297 180,297" fill="none" stroke="#334155" stroke-width="4" stroke-linejoin="round" marker-end="url(#m334155)"/>
+<text x="118.0" y="255.0" text-anchor="middle" font-size="20" font-weight="700" fill="#334155">interacts</text>
+<polyline points="275,332 275,430" fill="none" stroke="#334155" stroke-width="4" stroke-linejoin="round" marker-end="url(#m334155)"/>
+<text x="285" y="388.0" text-anchor="start" font-size="20" font-weight="700" fill="#334155">sends input</text>
+<polyline points="370,465 460,465" fill="none" stroke="#334155" stroke-width="4" stroke-linejoin="round" marker-end="url(#m334155)"/>
+<text x="415.0" y="450.0" text-anchor="middle" font-size="20" font-weight="700" fill="#334155">updates</text>
+<polyline points="550,430 550,312 370,312" fill="none" stroke="#334155" stroke-width="4" stroke-linejoin="round" marker-end="url(#m334155)"/>
+<text x="560" y="388.0" text-anchor="start" font-size="20" font-weight="700" fill="#334155">notifies</text>
+<text x="700" y="336.2" text-anchor="start" font-size="28" font-weight="400" fill="#111827">Nothing in this picture records</text>
+<text x="700" y="372.6" text-anchor="start" font-size="28" font-weight="400" fill="#111827">why a change was made,</text>
+<text x="700" y="409.0" text-anchor="start" font-size="28" font-weight="400" fill="#111827">who signed it,</text>
+<text x="700" y="445.4" text-anchor="start" font-size="28" font-weight="400" fill="#111827">or who checked it.</text>
+<text x="30" y="588.4" text-anchor="start" font-size="24" font-weight="700" fill="#111827">Same layers, same arrows in the next picture. Watch what gets added.</text>
+</svg>
