@@ -5,6 +5,8 @@ from pathlib import Path
 import pytest
 
 DEMO = Path(__file__).resolve().parent.parent / "demo-app"
+# Tests must not depend on records that someone later adds to the shipped demo app.
+SKIP = ("0*.md", "__pycache__")
 
 
 def git(root, *args):
@@ -15,7 +17,7 @@ def git(root, *args):
 def repo(tmp_path):
     """A throwaway git repo with the demo app on 'main', and a 'feature' branch checked out."""
     root = tmp_path / "shop"
-    shutil.copytree(DEMO, root)
+    shutil.copytree(DEMO, root, ignore=shutil.ignore_patterns(*SKIP))
     git(root, "init", "-b", "main")
     git(root, "config", "user.name", "Test Builder")
     git(root, "config", "user.email", "test@example.invalid")
