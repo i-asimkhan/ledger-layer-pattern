@@ -7,3 +7,5 @@ def receipt(order: Order) -> str:
     lines += [f"  {qty} x {name}" for name, qty in order.items.items()]
     lines.append(f"Total: {order.total():.2f}")
     return "\n".join(lines)
+
+# Show prices with two decimals.
